@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjkw3tltv1vq7"
-path="res://.godot/imported/Epicuro Surpreso.png-f48390dea5b4cccede60fb3abec18026.ctex"
+uid="uid://bfabowh8jb6fp"
+path="res://.godot/imported/Inacio.png-aa33760fcf43c0c3342337c234ad9e76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Epicuro(Grecia)/Epicuro Surpreso.png"
-dest_files=["res://.godot/imported/Epicuro Surpreso.png-f48390dea5b4cccede60fb3abec18026.ctex"]
+source_file="res://Sprite/Inacio.png"
+dest_files=["res://.godot/imported/Inacio.png-aa33760fcf43c0c3342337c234ad9e76.ctex"]
 
 [params]
 

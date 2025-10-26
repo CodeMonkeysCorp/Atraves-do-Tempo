@@ -1,4 +1,4 @@
-extends Camera2D
+extends Camera2D #BY Matheus Busemayer
 
 @export var player: NodePath
 @export var zoom_normal: Vector2 = Vector2(1.2, 1.2)
