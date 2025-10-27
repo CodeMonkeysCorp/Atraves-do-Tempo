@@ -42,7 +42,7 @@ shape = SubResource("RectangleShape2D_jcea2")
 position = Vector2(87, -5.72205e-06)
 scale = Vector2(0.279412, 0.278486)
 sprite_frames = SubResource("SpriteFrames_qlg0r")
-animation = &"idle"
+animation = &"run"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(78, 0)

@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://cx1sxgr54fs5v"]
+
+[ext_resource type="Texture2D" uid="uid://dsu4ljhoua13v" path="res://assets/Epicuro(Grecia)/EpicuroPensando.png" id="1_5tv57"]
+[ext_resource type="Texture2D" uid="uid://ceuxcdq0je5kt" path="res://Sprite/ChatGPT Image 17 de out. de 2025, 23_43_48.png" id="2_cfghr"]
+[ext_resource type="Texture2D" uid="uid://p3ptppv5xn78" path="res://assets/Epicuro(Grecia)/EpicuroSurpreso.png" id="3_7rqwo"]
+[ext_resource type="Texture2D" uid="uid://dw4bqpobdebun" path="res://assets/Epicuro(Grecia)/EpicuroFalando.png" id="4_7lurf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1oiq"]
+size = Vector2(30.7358, 68.8612)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8v78"]
+size = Vector2(74.1758, 71.0267)
+
+[node name="GreciaNpc" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, 0)
+
+[node name="CollisionShapeNPC" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8.3766, -4.3309)
+shape = SubResource("RectangleShape2D_u1oiq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-7.5938, -9.27468)
+scale = Vector2(0.164332, 0.161662)
+texture = ExtResource("1_5tv57")
+
+[node name="CollisionShapeAreaTalk" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(-24.9739, -1.73236)
+shape = SubResource("RectangleShape2D_r8v78")
+
+[node name="SinalInteragir" type="Sprite2D" parent="."]
+position = Vector2(-19.6709, -49.8053)
+scale = Vector2(0.0246075, 0.0352112)
+texture = ExtResource("2_cfghr")
+
+[node name="LigaDesliga" type="Sprite2D" parent="."]
+
+[node name="Surpresa" type="Sprite2D" parent="LigaDesliga"]
+visible = false
+position = Vector2(-7, -10.8937)
+scale = Vector2(0.164259, 0.168667)
+texture = ExtResource("3_7rqwo")
+
+[node name="Fala" type="Sprite2D" parent="LigaDesliga"]
+visible = false
+position = Vector2(-6.56804, -9.22479)
+scale = Vector2(0.164184, 0.161471)
+texture = ExtResource("4_7lurf")
+
+[node name="Pensando" type="Sprite2D" parent="LigaDesliga"]
+visible = false
+position = Vector2(-6.56804, -9.23691)
+scale = Vector2(0.164184, 0.161518)
+texture = ExtResource("1_5tv57")
