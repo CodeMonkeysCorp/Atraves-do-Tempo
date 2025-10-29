@@ -4,6 +4,7 @@ extends Node
 var scenes := {
 	"MainMenu":  "res://scenes/MainMenu.tscn",
 	"FaseEgito": "res://scenes/FaseEgito.tscn",
+	"FaseIdadeMedia": "res://scenes/Fase_Idade_Media.tscn",
 	"Creditos":  "res://scenes/Creditos.tscn",
 }
 

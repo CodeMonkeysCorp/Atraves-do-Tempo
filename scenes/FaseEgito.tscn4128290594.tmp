@@ -1,0 +1,126 @@
+[gd_scene load_steps=11 format=3 uid="uid://dcestwq5ori37"]
+
+[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://Sprite/Egito2.png" id="1_3cc5n"]
+[ext_resource type="Script" uid="uid://cocmpmutbdulg" path="res://scripts/PuzzleAreaFase1.gd" id="2_81n4k"]
+[ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_kmvkh"]
+[ext_resource type="Texture2D" uid="uid://rgioxxvel83c" path="res://Sprite/placa.png" id="3_gmhaf"]
+[ext_resource type="Texture2D" uid="uid://s03roinj7iq4" path="res://Sprite/meas.png" id="4_81n4k"]
+[ext_resource type="Texture2D" uid="uid://ca7t6346t5su6" path="res://Sprite/DialogoTESTE6.png" id="4_kmvkh"]
+[ext_resource type="PackedScene" uid="uid://dx3e24i2x4epj" path="res://scenes/Dialogo_fase_1.tscn" id="5_3cc5n"]
+[ext_resource type="PackedScene" uid="uid://flykwqdqh3rm" path="res://scenes/Npc.tscn" id="5_kpb4j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpb4j"]
+size = Vector2(168.439, 218.314)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2roj"]
+distance = -224.883
+
+[node name="FaseEgito" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(958.5, 539.25)
+scale = Vector2(1.24674, 1.05811)
+texture = ExtResource("1_3cc5n")
+
+[node name="AreaPuzzle" type="Area2D" parent="Sprite2D"]
+position = Vector2(-65.3705, 12.9949)
+script = ExtResource("2_81n4k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AreaPuzzle"]
+position = Vector2(167.637, 337.867)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_kpb4j")
+
+[node name="Placa" type="Sprite2D" parent="Sprite2D/AreaPuzzle"]
+position = Vector2(175.257, 322.982)
+scale = Vector2(0.174548, 0.219653)
+texture = ExtResource("3_gmhaf")
+
+[node name="MesaPuzzle" type="Sprite2D" parent="Sprite2D/AreaPuzzle"]
+position = Vector2(155.606, 388.428)
+scale = Vector2(0.111938, 0.139074)
+texture = ExtResource("4_81n4k")
+
+[node name="player" parent="." instance=ExtResource("2_kmvkh")]
+position = Vector2(200, 908)
+scale = Vector2(2.11369, 2.11369)
+
+[node name="InteragirPuzzle" type="Label" parent="player"]
+offset_left = -1.41932
+offset_top = 22.236
+offset_right = 171.581
+offset_bottom = 67.236
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "<<Puzzle>>"
+
+[node name="Interagir" type="Label" parent="player"]
+visible = false
+offset_left = -30.0
+offset_top = 22.0
+offset_right = 185.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "<<Interagir>>"
+
+[node name="Dialogo" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="LigaDesligaDialogos" type="Sprite2D" parent="Dialogo"]
+
+[node name="FiltroEscuro" type="ColorRect" parent="Dialogo/LigaDesligaDialogos"]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_stretch_ratio = 0.0
+color = Color(0, 0, 0, 0.431373)
+
+[node name="Dialogo" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos"]
+z_index = -1
+position = Vector2(1330, 882)
+scale = Vector2(1.14339, 1.22701)
+texture = ExtResource("4_kmvkh")
+
+[node name="Label" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+anchors_preset = -1
+anchor_left = -0.0356063
+anchor_top = -0.0565605
+anchor_right = 0.0925187
+anchor_bottom = -0.0565605
+offset_left = -229.458
+offset_top = 41.7906
+offset_right = 949.542
+offset_bottom = 101.791
+scale = Vector2(0.391364, 0.864029)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+max_lines_visible = 100
+metadata/_edit_use_anchors_ = true
+
+[node name="npc" parent="." instance=ExtResource("5_kpb4j")]
+z_index = -1
+position = Vector2(1730, 890)
+scale = Vector2(5.16105, 4.88364)
+
+[node name="LimiteMundo" type="StaticBody2D" parent="."]
+position = Vector2(-1027, 218)
+rotation = -1.5708
+scale = Vector2(15.2375, 4.59795)
+
+[node name="CollisionShape2DRight" type="CollisionShape2D" parent="LimiteMundo"]
+position = Vector2(0, 414)
+shape = SubResource("WorldBoundaryShape2D_h2roj")
+
+[node name="CollisionShape2DLeft" type="CollisionShape2D" parent="LimiteMundo"]
+position = Vector2(0, 448)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_h2roj")
+
+[node name="DialogoFase1" parent="." instance=ExtResource("5_3cc5n")]
+visible = false

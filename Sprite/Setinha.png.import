@@ -2,24 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3k13ofljdns2"
-path="res://.godot/imported/Cabeçalho (4).png-cf080951cf12dcfeb90963142af299f5.ctex"
+uid="uid://duman6kcr1bx1"
+path="res://.godot/imported/Setinha.png-df878d48474f80b2cbc09a60cb6ab3b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Cabeçalho (4).png"
-dest_files=["res://.godot/imported/Cabeçalho (4).png-cf080951cf12dcfeb90963142af299f5.ctex"]
+source_file="res://Sprite/Setinha.png"
+dest_files=["res://.godot/imported/Setinha.png-df878d48474f80b2cbc09a60cb6ab3b8.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
-compress/uastc_level=0
-compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -27,10 +25,6 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/channel_remap/red=0
-process/channel_remap/green=1
-process/channel_remap/blue=2
-process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

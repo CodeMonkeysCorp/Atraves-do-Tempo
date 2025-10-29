@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://j5u2bisipubl"]
+[gd_scene load_steps=3 format=3 uid="uid://j5u2bisipubl"]
 
 [ext_resource type="Script" uid="uid://7838q70ir6h" path="res://scripts/PuzzleEgito.gd" id="1_m0ae6"]
+[ext_resource type="Texture2D" uid="uid://bepgpgwk5u4ys" path="res://Sprite/ui_sprites.png" id="2_lnxvv"]
 
 [node name="FaseEgito" type="Control"]
 layout_mode = 3
@@ -8,6 +9,11 @@ anchors_preset = 0
 offset_right = 162.0
 offset_bottom = 225.0
 script = ExtResource("1_m0ae6")
+
+[node name="UiSprites" type="Sprite2D" parent="."]
+position = Vector2(157, 97)
+scale = Vector2(7.33738, 4.27967)
+texture = ExtResource("2_lnxvv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -56,6 +62,14 @@ horizontal_alignment = 1
 layout_mode = 2
 disabled = true
 text = "Avançar"
+
+[node name="FiltroEscuro" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_stretch_ratio = 0.0
+color = Color(0, 0, 0, 0.431373)
 
 [connection signal="pressed" from="VBoxContainer/Puzzle/HBoxContainer/BtnConfirmar" to="." method="_on_btn_confirmar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Puzzle/BtnAvancar" to="." method="_on_btn_avancar_pressed"]
