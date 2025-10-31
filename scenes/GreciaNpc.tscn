@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cx1sxgr54fs5v"]
+[gd_scene load_steps=8 format=3 uid="uid://cx1sxgr54fs5v"]
 
 [ext_resource type="Texture2D" uid="uid://dsu4ljhoua13v" path="res://assets/Epicuro(Grecia)/EpicuroPensando.png" id="1_5tv57"]
+[ext_resource type="Script" uid="uid://b7vyfq4cvi2cr" path="res://scripts/GreciaNpc.gd" id="1_cfghr"]
 [ext_resource type="Texture2D" uid="uid://ceuxcdq0je5kt" path="res://Sprite/ChatGPT Image 17 de out. de 2025, 23_43_48.png" id="2_cfghr"]
 [ext_resource type="Texture2D" uid="uid://p3ptppv5xn78" path="res://assets/Epicuro(Grecia)/EpicuroSurpreso.png" id="3_7rqwo"]
 [ext_resource type="Texture2D" uid="uid://dw4bqpobdebun" path="res://assets/Epicuro(Grecia)/EpicuroFalando.png" id="4_7lurf"]
@@ -12,6 +13,7 @@ size = Vector2(30.7358, 68.8612)
 size = Vector2(74.1758, 71.0267)
 
 [node name="GreciaNpc" type="Node2D"]
+script = ExtResource("1_cfghr")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1, 0)

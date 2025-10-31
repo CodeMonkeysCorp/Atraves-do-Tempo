@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bng43bgvuitqm"]
+[gd_scene load_steps=7 format=3 uid="uid://bng43bgvuitqm"]
 
-[ext_resource type="Texture2D" uid="uid://eqc1kwmd64y2" path="res://assets/Cenarios/GrÔö£-«cia.png" id="1_n4jj8"]
+[ext_resource type="Texture2D" uid="uid://1msj5bi4jki" path="res://assets/Cenarios/GreciaFundo.png" id="1_n4jj8"]
 [ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_2pqa2"]
+[ext_resource type="Texture2D" uid="uid://dqnecuurap2x" path="res://assets/Cenarios/Pilar.png" id="2_fqtnc"]
 [ext_resource type="Texture2D" uid="uid://b5jaflhloqncs" path="res://assets/Menu/CabeÔö£-¦alho.png" id="3_fqtnc"]
 [ext_resource type="PackedScene" uid="uid://cx1sxgr54fs5v" path="res://scenes/GreciaNpc.tscn" id="4_n4jj8"]
 
@@ -10,11 +11,24 @@ distance = -224.883
 
 [node name="FaseGrecia" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Cenário" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(958.5, 539.25)
 scale = Vector2(1.24674, 1.05811)
 texture = ExtResource("1_n4jj8")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(667, 779.00006)
+rotation = -1.5539709
+scale = Vector2(0.42270088, 0.45755932)
+skew = -0.0024667978
+color = Color(0, 0, 0, 0.42352942)
+polygon = PackedVector2Array(-174.83752, -151.41064, -174.83752, -151.41064, -170.46655, 326.47864, -255.69995, 414.01282, -255.69995, 529.9365, 246.95825, 525.20483, 251.3291, 397.45227, 174.83765, 331.2102, 152.98291, -392.72095, 183.57959, -511.01038, 231.65991, -544.1315, 299.40942, -539.3999, 299.40942, -612.7393, -297.22388, -612.7393, -297.22388, -548.86304, -246.95813, -534.66833, -170.46655, -475.52356)
+
+[node name="Pilar" type="Sprite2D" parent="."]
+position = Vector2(971.99994, 668.00006)
+scale = Vector2(0.45756742, 0.42269212)
+texture = ExtResource("2_fqtnc")
 
 [node name="player" parent="." instance=ExtResource("2_2pqa2")]
 position = Vector2(200, 908)
