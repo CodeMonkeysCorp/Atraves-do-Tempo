@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d063pd4vedn1g"]
+[gd_scene load_steps=4 format=3 uid="uid://bhmsx00dios8y"]
 
-[ext_resource type="Script" uid="uid://c8odmv3sb1ms6" path="res://scripts/PuzzleGrego.gd" id="1_k10ag"]
-[ext_resource type="Texture2D" uid="uid://fu7l3cly1fk5" path="res://Sprite/Grecia.png" id="2_k10ag"]
+[ext_resource type="Script" path="res://scripts/PuzzleGrego.gd" id="1_k10ag"]
+[ext_resource type="Texture2D" uid="uid://cecpafsla3xlc" path="res://Sprite/Grecia.png" id="2_k10ag"]
 [ext_resource type="Texture2D" uid="uid://dioofty6xleka" path="res://Sprite/Pilar.png" id="3_1hheu"]
 
 [node name="PuzzleGrega" type="Node2D"]
@@ -157,5 +157,17 @@ text = "3 Metros"
 
 [node name="Line2D" type="Line2D" parent="."]
 points = PackedVector2Array(595, 231, 312, 537)
+width = 2.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(7, 18)
+points = PackedVector2Array(374, 218, 390, 203, 409, 198, 434, 202, 445, 208, 450, 225, 451, 240, 442, 257, 431, 262, 417, 274, 408, 294, 408, 311)
+width = 2.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(7, 18)
+points = PackedVector2Array(407, 318, 406, 323)
 width = 2.0
 default_color = Color(1, 0, 0, 1)
