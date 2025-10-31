@@ -11,11 +11,7 @@
 size = Vector2(30.7358, 78.6058)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2h74y"]
-<<<<<<< HEAD:scenes/EgitoNpc.tscn
-size = Vector2(67.209, 79.6885)
-=======
 size = Vector2(67.209, 82.7201)
->>>>>>> origin/Fase-Medieval:scenes/Npc.tscn
 
 [node name="EgitoNpc" type="Node2D"]
 scale = Vector2(2.44015, 2.30899)
@@ -34,11 +30,7 @@ scale = Vector2(0.0700437, 0.0632863)
 texture = ExtResource("3_xwh3f")
 
 [node name="CollisionShapeAreaTalk" type="CollisionShape2D" parent="Area2D"]
-<<<<<<< HEAD:scenes/EgitoNpc.tscn
-position = Vector2(-21.4905, -9.09489)
-=======
 position = Vector2(-21.4905, -7.57908)
->>>>>>> origin/Fase-Medieval:scenes/Npc.tscn
 shape = SubResource("RectangleShape2D_2h74y")
 
 [node name="SinalInteragir" type="Sprite2D" parent="."]
