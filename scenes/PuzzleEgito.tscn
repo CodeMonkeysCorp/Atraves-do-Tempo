@@ -65,6 +65,7 @@ text = "Avançar"
 
 [node name="FiltroEscuro" type="ColorRect" parent="."]
 visible = false
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_stretch_ratio = 0.0
