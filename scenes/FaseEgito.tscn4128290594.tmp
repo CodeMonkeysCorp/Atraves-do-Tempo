@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcestwq5ori37"]
+[gd_scene load_steps=11 format=3 uid="uid://dcestwq5ori37"]
 
 [ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://Sprite/Egito2.png" id="1_3cc5n"]
 [ext_resource type="Script" uid="uid://cocmpmutbdulg" path="res://scripts/PuzzleAreaFase1.gd" id="2_81n4k"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://rgioxxvel83c" path="res://Sprite/placa.png" id="3_gmhaf"]
 [ext_resource type="Texture2D" uid="uid://s03roinj7iq4" path="res://Sprite/meas.png" id="4_81n4k"]
 [ext_resource type="Texture2D" uid="uid://ca7t6346t5su6" path="res://Sprite/DialogoTESTE6.png" id="4_kmvkh"]
+[ext_resource type="PackedScene" uid="uid://dx3e24i2x4epj" path="res://scenes/Dialogo_fase_1.tscn" id="5_3cc5n"]
 [ext_resource type="PackedScene" uid="uid://flykwqdqh3rm" path="res://scenes/Npc.tscn" id="5_kpb4j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpb4j"]
@@ -57,6 +58,7 @@ theme_override_font_sizes/font_size = 32
 text = "<<Puzzle>>"
 
 [node name="Interagir" type="Label" parent="player"]
+visible = false
 offset_left = -30.0
 offset_top = 22.0
 offset_right = 185.0
@@ -119,3 +121,6 @@ shape = SubResource("WorldBoundaryShape2D_h2roj")
 position = Vector2(0, 448)
 rotation = 3.14159
 shape = SubResource("WorldBoundaryShape2D_h2roj")
+
+[node name="DialogoFase1" parent="." instance=ExtResource("5_3cc5n")]
+visible = false

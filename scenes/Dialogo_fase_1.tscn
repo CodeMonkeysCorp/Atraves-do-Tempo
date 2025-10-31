@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx3e24i2x4epj"]
+
+[ext_resource type="Texture2D" uid="uid://xohy5664h6cp" path="res://Sprite/DIALOGO.png" id="1_ccld0"]
+[ext_resource type="Texture2D" uid="uid://b5jaflhloqncs" path="res://assets/Menu/CabeÔö£-¦alho.png" id="2_s3vkn"]
+
+[node name="PrototiposConfirmarDepoisDeletar" type="Node2D"]
+
+[node name="PrototiposConfirmarDepoisDeletar" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_stretch_ratio = 0.0
+color = Color(0, 0, 0, 0.431373)
+
+[node name="PrototiposConfirmarDepoisDeletar" type="Sprite2D" parent="PrototiposConfirmarDepoisDeletar"]
+position = Vector2(1347, 923.35)
+scale = Vector2(0.936219, 0.960592)
+texture = ExtResource("1_ccld0")
+
+[node name="PrototiposConfirmarDepoisDeletar" type="Label" parent="PrototiposConfirmarDepoisDeletar/PrototiposConfirmarDepoisDeletar"]
+anchors_preset = -1
+anchor_left = -0.0358192
+anchor_top = -0.0311016
+anchor_right = 0.185138
+anchor_bottom = -0.0311016
+offset_left = -272.551
+offset_top = -36.66
+offset_right = 906.449
+offset_bottom = 23.34
+scale = Vector2(0.514811, 1.11616)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "SHIHFIUHDVUHSUVHFUISHVBUICXHVUCXZHU"
+max_lines_visible = 100
+metadata/_edit_use_anchors_ = true
+
+[node name="PrototiposConfirmarDepoisDeletar2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1300, 932)
+scale = Vector2(0.496197, 0.536193)
+texture = ExtResource("2_s3vkn")
