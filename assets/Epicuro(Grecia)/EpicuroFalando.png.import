@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjkw3tltv1vq7"
-path="res://.godot/imported/Epicuro Surpreso.png-f48390dea5b4cccede60fb3abec18026.ctex"
+uid="uid://dw4bqpobdebun"
+path="res://.godot/imported/EpicuroFalando.png-35bff1b7e782805955e21fef0a2e3ad9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Epicuro(Grecia)/Epicuro Surpreso.png"
-dest_files=["res://.godot/imported/Epicuro Surpreso.png-f48390dea5b4cccede60fb3abec18026.ctex"]
+source_file="res://assets/Epicuro(Grecia)/EpicuroFalando.png"
+dest_files=["res://.godot/imported/EpicuroFalando.png-35bff1b7e782805955e21fef0a2e3ad9.ctex"]
 
 [params]
 

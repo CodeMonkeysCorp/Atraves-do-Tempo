@@ -13,7 +13,7 @@ size = Vector2(30.7358, 68.8612)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2h74y"]
 size = Vector2(74.1758, 71.0267)
 
-[node name="npc" type="Node2D"]
+[node name="EgitoNpc" type="Node2D"]
 scale = Vector2(2.44015, 2.30899)
 script = ExtResource("1_abqhh")
 

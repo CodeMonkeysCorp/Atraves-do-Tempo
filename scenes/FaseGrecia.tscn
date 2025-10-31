@@ -1,22 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcestwq5ori37"]
+[gd_scene load_steps=6 format=3 uid="uid://bng43bgvuitqm"]
 
-[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://Sprite/Egito2.png" id="1_3cc5n"]
-[ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_kmvkh"]
-[ext_resource type="Texture2D" uid="uid://b5jaflhloqncs" path="res://assets/Menu/CabeÔö£-¦alho.png" id="3_gmhaf"]
-[ext_resource type="PackedScene" uid="uid://flykwqdqh3rm" path="res://scenes/EgitoNpc.tscn" id="5_kpb4j"]
+[ext_resource type="Texture2D" uid="uid://eqc1kwmd64y2" path="res://assets/Cenarios/GrÔö£-«cia.png" id="1_n4jj8"]
+[ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_2pqa2"]
+[ext_resource type="Texture2D" uid="uid://b5jaflhloqncs" path="res://assets/Menu/CabeÔö£-¦alho.png" id="3_fqtnc"]
+[ext_resource type="PackedScene" uid="uid://cx1sxgr54fs5v" path="res://scenes/GreciaNpc.tscn" id="4_n4jj8"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2roj"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gdfqa"]
 distance = -224.883
 
-[node name="FaseEgito" type="Node2D"]
+[node name="FaseGrecia" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(958.5, 539.25)
 scale = Vector2(1.24674, 1.05811)
-texture = ExtResource("1_3cc5n")
+texture = ExtResource("1_n4jj8")
 
-[node name="player" parent="." instance=ExtResource("2_kmvkh")]
+[node name="player" parent="." instance=ExtResource("2_2pqa2")]
 position = Vector2(200, 908)
 scale = Vector2(2.11369, 2.11369)
 
@@ -26,7 +26,7 @@ follow_viewport_enabled = true
 [node name="CaixaDialogo" type="Sprite2D" parent="Dialogo"]
 position = Vector2(1300, 932)
 scale = Vector2(0.496197, 0.536193)
-texture = ExtResource("3_gmhaf")
+texture = ExtResource("3_fqtnc")
 
 [node name="Label" type="Label" parent="Dialogo/CaixaDialogo"]
 anchors_preset = -1
@@ -44,10 +44,9 @@ theme_override_font_sizes/font_size = 30
 max_lines_visible = 100
 metadata/_edit_use_anchors_ = true
 
-[node name="npc" parent="." instance=ExtResource("5_kpb4j")]
-z_index = -1
-position = Vector2(1663, 890)
-scale = Vector2(5.16105, 4.88364)
+[node name="GreciaNpc" parent="." instance=ExtResource("4_n4jj8")]
+position = Vector2(1660, 845)
+scale = Vector2(7.09801, 7.09801)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1027, 218)
@@ -56,9 +55,9 @@ scale = Vector2(15.2375, 4.59795)
 
 [node name="CollisionShape2DRight" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 414)
-shape = SubResource("WorldBoundaryShape2D_h2roj")
+shape = SubResource("WorldBoundaryShape2D_gdfqa")
 
 [node name="CollisionShape2DLeft" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 448)
 rotation = 3.14159
-shape = SubResource("WorldBoundaryShape2D_h2roj")
+shape = SubResource("WorldBoundaryShape2D_gdfqa")
