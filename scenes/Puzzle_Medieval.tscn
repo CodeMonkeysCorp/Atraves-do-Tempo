@@ -1,18 +1,18 @@
 [gd_scene load_steps=6 format=3 uid="uid://da4ortkdpwybv"]
 
-[ext_resource type="Texture2D" uid="uid://c0vct45birdsj" path="res://Sprite/Colinas.png" id="1_dxgt4"]
+[ext_resource type="Texture2D" uid="uid://x0h7hwu1pr8m" path="res://Sprite/Colinas.png" id="1_dxgt4"]
 [ext_resource type="Script" uid="uid://c553cqo4acgwp" path="res://scripts/Puzzle_Medieval.gd" id="1_l0alv"]
-[ext_resource type="Texture2D" uid="uid://c6kg8ivrmilyd" path="res://Sprite/catapulta.png" id="2_4lkbv"]
-[ext_resource type="Texture2D" uid="uid://cwr3got7iaw22" path="res://Sprite/Castelo.png" id="4_mr3cr"]
-[ext_resource type="Texture2D" uid="uid://csn014aq05mf" path="res://Sprite/X.png" id="5_4lkbv"]
+[ext_resource type="Texture2D" uid="uid://bq72fwqrs8kf6" path="res://Sprite/catapulta.png" id="2_4lkbv"]
+[ext_resource type="Texture2D" uid="uid://44k1xvorsnij" path="res://Sprite/Castelo.png" id="4_mr3cr"]
+[ext_resource type="Texture2D" uid="uid://bpbsj3kej3fyb" path="res://Sprite/X.png" id="5_4lkbv"]
 
 [node name="PuzzleMedieval" type="Node2D"]
 script = ExtResource("1_l0alv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10
-position = Vector2(685, 391)
-scale = Vector2(0.889, 0.754)
+position = Vector2(601, 404)
+scale = Vector2(1.22691, 0.778536)
 texture = ExtResource("1_dxgt4")
 
 [node name="Catapulta" type="Sprite2D" parent="."]

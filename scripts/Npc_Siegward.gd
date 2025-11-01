@@ -90,11 +90,11 @@ func proximo_dialogo():
 func show_dialog():
 	match fala:
 		0:
-			label_txt.text = "Hola HermanoHola HermanoHola Hermano..."
+			label_txt.text = "Ei voce seu escudeiro tampinha! Venha aqui"
 		1:
-			label_txt.text = "segundosegundosegundosegundo"
+			label_txt.text = "Precisamos de gente para a catapulta continuar funcionando."
 		2:
-			label_txt.text = "terceiroterceiroterceiroterceiro"
+			label_txt.text = "Se o operador da catapulta morrer continue operando no lugar dele. Basta acertar a distancia e a força."
 			dialogo_finalizado = true
 			if interagir_puzzle:
 				interagir_puzzle.monitoring = true
@@ -102,7 +102,7 @@ func show_dialog():
 			setinha.show()
 			_encerrar_dialogo()
 		3:
-			label_txt.text = "Se de fato conseguir resolver esse problema pra mim eu lhe darei esse Fragmento de Relógio"
+			label_txt.text = "Vá e é melhor acertar o alvo. Se continuarmos errando os ultimos 3 meses de cerco se reduzidos à um disperdiçados."
 		_:
 			_encerrar_dialogo()
 		

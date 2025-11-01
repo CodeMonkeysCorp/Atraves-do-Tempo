@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bng43bgvuitqm"]
 
-[ext_resource type="Texture2D" uid="uid://eqc1kwmd64y2" path="res://assets/Cenarios/GrÔö£-«cia.png" id="1_n4jj8"]
+[ext_resource type="Texture2D" uid="uid://eqc1kwmd64y2" path="res://assets/Cenarios/Gr+ö+Â-ú--½cia.png" id="1_n4jj8"]
 [ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_2pqa2"]
-[ext_resource type="Texture2D" uid="uid://b5jaflhloqncs" path="res://assets/Menu/CabeÔö£-¦alho.png" id="3_fqtnc"]
+[ext_resource type="Texture2D" uid="uid://b5jaflhloqncs" path="res://assets/Menu/Cabe+ºalho.png" id="3_fqtnc"]
 [ext_resource type="PackedScene" uid="uid://cx1sxgr54fs5v" path="res://scenes/GreciaNpc.tscn" id="4_n4jj8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gdfqa"]

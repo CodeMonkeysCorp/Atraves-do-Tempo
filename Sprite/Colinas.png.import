@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Sprite/Castelo.png.import
-uid="uid://4ncpwb34wk81"
-path="res://.godot/imported/Castelo.png-ee45536415cb00455d9c2b3bdb780436.ctex"
-========
-uid="uid://c0vct45birdsj"
+uid="uid://x0h7hwu1pr8m"
 path="res://.godot/imported/Colinas.png-6769962b34378866fbbf4f0cc3c41d76.ctex"
->>>>>>>> origin/Fase-Medieval:Sprite/Colinas.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Sprite/Castelo.png.import
-source_file="res://Sprite/Castelo.png"
-dest_files=["res://.godot/imported/Castelo.png-ee45536415cb00455d9c2b3bdb780436.ctex"]
-========
 source_file="res://Sprite/Colinas.png"
 dest_files=["res://.godot/imported/Colinas.png-6769962b34378866fbbf4f0cc3c41d76.ctex"]
->>>>>>>> origin/Fase-Medieval:Sprite/Colinas.png.import
 
 [params]
 

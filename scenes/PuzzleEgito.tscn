@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://j5u2bisipubl"]
 
 [ext_resource type="Script" uid="uid://7838q70ir6h" path="res://scripts/PuzzleEgito.gd" id="1_m0ae6"]
-[ext_resource type="Texture2D" uid="uid://bepgpgwk5u4ys" path="res://Sprite/ui_sprites.png" id="2_lnxvv"]
+[ext_resource type="Texture2D" uid="uid://d2qtxlwr41qwn" path="res://Sprite/ui_sprites.png" id="2_lnxvv"]
 
 [node name="FaseEgito" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 162.0

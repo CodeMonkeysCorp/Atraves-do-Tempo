@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://flykwqdqh3rm"]
 
 [ext_resource type="Script" uid="uid://rvlgv0hlo3j" path="res://scripts/Npc.gd" id="1_abqhh"]
-[ext_resource type="Texture2D" uid="uid://ceuxcdq0je5kt" path="res://Sprite/SinalInteragir.png" id="3_rv78h"]
-[ext_resource type="Texture2D" uid="uid://bfabowh8jb6fp" path="res://Sprite/Inacio.png" id="3_xwh3f"]
+[ext_resource type="Texture2D" uid="uid://cflrj84pcgqsu" path="res://Sprite/SinalInteragir.png" id="3_rv78h"]
+[ext_resource type="Texture2D" uid="uid://c1t3op51f2h08" path="res://Sprite/Inacio.png" id="3_xwh3f"]
 [ext_resource type="Texture2D" uid="uid://bw1ykfhkj0emp" path="res://assets/Inacio/Inacio Falando.png" id="4_tl2vt"]
 [ext_resource type="Texture2D" uid="uid://b7nvtm0hgde7b" path="res://assets/Inacio/Inacio Pensativo.png" id="5_hwkja"]
 [ext_resource type="Texture2D" uid="uid://6uyfvl0uih3o" path="res://assets/Inacio/Inacio surpreso.png" id="6_0tygy"]

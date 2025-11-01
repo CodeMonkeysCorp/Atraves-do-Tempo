@@ -81,15 +81,15 @@ func proximo_dialogo():
 func show_dialog():
 	match fala:
 		0:
-			label_txt.text = "Hola HermanoHola HermanoHola Hermano..."
+			label_txt.text = "Ei, voce! Tu mesmo, voce é um mercador viajante né. Ótimo venha aqui e me ajude."
 		1:
-			label_txt.text = "segundosegundosegundosegundo"
+			label_txt.text = "Voce é bom frações né, todo mercador é então me ajude com o problema naquela mesa"
 		2:
-			label_txt.text = "terceiroterceiroterceiroterceiro"
+			label_txt.text = "Meus empregados estão ocupados demais pra lidar com isso."
 			dialogo_finalizado = true
 			interagir_puzzle.monitoring = true
 			_encerrar_dialogo()
 		3:
-			label_txt.text = "Se de fato conseguir resolver esse problema pra mim eu lhe darei esse Fragmento de Relógio"
+			label_txt.text = "E sobre recompensa apenas digamos que sou generoso..."
 		_:
 			_encerrar_dialogo()
