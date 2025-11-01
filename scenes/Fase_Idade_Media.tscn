@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://da4ortkdpwybv" path="res://scenes/Puzzle_Medieval.tscn" id="5_jbadj"]
 [ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="5_y31y8"]
 [ext_resource type="Texture2D" uid="uid://duman6kcr1bx1" path="res://Sprite/Setinha.png" id="6_1yahv"]
-[ext_resource type="Texture2D" uid="uid://ca7t6346t5su6" path="res://Sprite/DialogoTESTE6.png" id="6_2eg0y"]
+[ext_resource type="Texture2D" uid="uid://wnxmwcxx3l6v" path="res://Sprite/DialogoTESTE6.png" id="6_2eg0y"]
 [ext_resource type="PackedScene" uid="uid://c13d5mr7xjmag" path="res://scenes/Npc_Siegward.tscn" id="7_pt0x4"]
 [ext_resource type="Script" uid="uid://dag611cg2l4a5" path="res://scripts/tela_load.gd" id="7_xed43"]
 [ext_resource type="Script" uid="uid://xwo7ual0rtxu" path="res://scripts/PuzzleAreaFase2.gd" id="7_y31y8"]
@@ -27,6 +27,12 @@ script = ExtResource("1_4ldm5")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(958.5, 539.25)
+scale = Vector2(1.24674, 1.05811)
+texture = ExtResource("1_xed43")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(3744, 539.25)
 scale = Vector2(1.24674, 1.05811)
 texture = ExtResource("1_xed43")
 
