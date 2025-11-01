@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://2m281abxmes5"]
+[gd_scene load_steps=8 format=3 uid="uid://2m281abxmes5"]
 
 [ext_resource type="Script" uid="uid://di50t6j6srdvf" path="res://scripts/Player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://wqhsfcex1sjd" path="res://assets/Luca/andando-removebg-preview.png" id="2_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://b81f7kviob0yq" path="res://assets/Luca/parado-removebg-preview.png" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://bbuthjtwlbsnh" path="res://assets/Luca/passo1.png" id="3_70d11"]
+[ext_resource type="Texture2D" uid="uid://k8t0win0yils" path="res://assets/Luca/passo2.png" id="4_cw2d6"]
 [ext_resource type="Script" uid="uid://c0eej3m2kklv2" path="res://scripts/CameraPlayer.gd" id="4_dqkch"]
+[ext_resource type="Texture2D" uid="uid://c8k66i48mjo1q" path="res://assets/Luca/passo3.png" id="5_khinc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcea2"]
 size = Vector2(28.7764, 63.3299)
@@ -12,7 +13,7 @@ size = Vector2(28.7764, 63.3299)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_dqkch")
+"texture": ExtResource("3_70d11")
 }],
 "loop": true,
 "name": &"idle",
@@ -20,14 +21,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qhqgy")
+"texture": ExtResource("3_70d11")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_dqkch")
+"texture": ExtResource("4_cw2d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_khinc")
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -39,8 +43,8 @@ scale = Vector2(2.39663, 2.38869)
 shape = SubResource("RectangleShape2D_jcea2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(87, -5.72205e-06)
-scale = Vector2(0.279412, 0.278486)
+position = Vector2(82, -6.0000057)
+scale = Vector2(0.18811734, 0.18749392)
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 animation = &"run"
 
