@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://j5u2bisipubl"]
 
 [ext_resource type="Script" uid="uid://7838q70ir6h" path="res://scripts/PuzzleEgito.gd" id="1_m0ae6"]
-[ext_resource type="Texture2D" uid="uid://bepgpgwk5u4ys" path="res://Sprite/ui_sprites.png" id="2_lnxvv"]
+[ext_resource type="Texture2D" uid="uid://d2qtxlwr41qwn" path="res://Sprite/ui_sprites.png" id="2_lnxvv"]
 
 [node name="FaseEgito" type="Control"]
 layout_mode = 3
@@ -70,6 +70,36 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_stretch_ratio = 0.0
 color = Color(0, 0, 0, 0.431373)
+
+[node name="Dica1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 56.0
+offset_right = 357.0
+offset_bottom = 79.0
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "MMC de 2 e 3 é 6."
+
+[node name="Dica3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 98.99999
+offset_right = 395.0
+offset_bottom = 121.99999
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "3/6 + 2/6 = 5/6."
+
+[node name="Dica2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 76.0
+offset_right = 441.0
+offset_bottom = 99.0
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Use o mesmo denominador."
 
 [connection signal="pressed" from="VBoxContainer/Puzzle/HBoxContainer/BtnConfirmar" to="." method="_on_btn_confirmar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Puzzle/BtnAvancar" to="." method="_on_btn_avancar_pressed"]
