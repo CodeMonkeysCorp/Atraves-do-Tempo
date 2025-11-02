@@ -1,5 +1,4 @@
-# PuzzleArea
-extends Area2D
+extends Area2D #BY Matheus Busemayer
 
 var botoes_puzzle: Node = null
 var camera: Node = null
@@ -8,6 +7,7 @@ var player_node: Node = null
 @export var zoom_normal: Vector2 = Vector2(1.2, 1.2)
 @export var zoom_olhar: Vector2 = Vector2(0.75, 0.75)
 @onready var interagir_puzzleTxt = $"../../player/InteragirPuzzle"
+@onready var player = $"../../player"
 
 @export var limites_puzzle := {
 	"left": 2820,
@@ -67,6 +67,7 @@ func _process(_delta: float) -> void:
 func ativar_puzzle() -> void:
 	puzzle_ativo = true
 	interagir_puzzleTxt.hide()
+	player.lock_movement()
 	if botoes_puzzle:
 		if botoes_puzzle.has_method("show"):
 			botoes_puzzle.show()

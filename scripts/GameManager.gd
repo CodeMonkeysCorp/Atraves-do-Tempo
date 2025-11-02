@@ -7,6 +7,7 @@ var scenes := {
 	"FaseGrecia": "res://scenes/FaseGrecia.tscn",
 	"FaseIdadeMedia": "res://scenes/Fase_Idade_Media.tscn",
 	"Creditos":  "res://scenes/Creditos.tscn",
+	"Formulario": "res://scenes/Formulario.tscn",
 }
 
 func goto(scene_name: String) -> void:

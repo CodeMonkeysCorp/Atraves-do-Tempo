@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccdklopo5ag4w"
-path="res://.godot/imported/Egito2.png-abe2406a8430b9ecaf292def437c9cb8.ctex"
+uid="uid://x0h7hwu1pr8m"
+path="res://.godot/imported/Colinas.png-75f31de116558c4d81a3d592a9d3f9d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cenarios/Egito2.png"
-dest_files=["res://.godot/imported/Egito2.png-abe2406a8430b9ecaf292def437c9cb8.ctex"]
+source_file="res://assets/Cenarios/Colinas.png"
+dest_files=["res://.godot/imported/Colinas.png-75f31de116558c4d81a3d592a9d3f9d1.ctex"]
 
 [params]
 

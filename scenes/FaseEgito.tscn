@@ -1,17 +1,17 @@
 [gd_scene load_steps=12 format=3 uid="uid://dcestwq5ori37"]
 
-[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://Sprite/Egito2.png" id="1_3cc5n"]
+[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://assets/Cenarios/Egito2.png" id="1_3cc5n"]
 [ext_resource type="Script" uid="uid://cocmpmutbdulg" path="res://scripts/PuzzleAreaFase1.gd" id="2_81n4k"]
 [ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_kmvkh"]
-[ext_resource type="Texture2D" uid="uid://it0t7ly2wd3a" path="res://Sprite/placa.png" id="3_gmhaf"]
-[ext_resource type="Texture2D" uid="uid://cxktkea245rjn" path="res://Sprite/meas.png" id="4_81n4k"]
+[ext_resource type="Texture2D" uid="uid://it0t7ly2wd3a" path="res://assets/Cenarios/placa.png" id="3_gmhaf"]
+[ext_resource type="Texture2D" uid="uid://cxktkea245rjn" path="res://assets/Cenarios/mesa.png" id="4_81n4k"]
 [ext_resource type="PackedScene" uid="uid://flykwqdqh3rm" path="res://scenes/EgitoNpc.tscn" id="5_kpb4j"]
 [ext_resource type="Texture2D" uid="uid://bgwldlrhky2pu" path="res://assets/Cenarios/CaixaDeDialogo.png" id="6_kpb4j"]
 [ext_resource type="Texture2D" uid="uid://cxmlfx7oyilei" path="res://assets/Luca/Luca pensando sem perna.PNG" id="7_melst"]
 [ext_resource type="Texture2D" uid="uid://dt8yn0v1ukdon" path="res://assets/Inacio/Background Eraser.png" id="8_a4ynv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpb4j"]
-size = Vector2(168.439, 218.314)
+size = Vector2(122.72, 240.051)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2roj"]
 distance = -224.883
@@ -29,7 +29,7 @@ position = Vector2(-65.3705, 12.9949)
 script = ExtResource("2_81n4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AreaPuzzle"]
-position = Vector2(167.637, 337.867)
+position = Vector2(170.445, 351.57)
 shape = SubResource("RectangleShape2D_kpb4j")
 
 [node name="Placa" type="Sprite2D" parent="Sprite2D/AreaPuzzle"]

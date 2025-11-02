@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccdklopo5ag4w"
-path="res://.godot/imported/Egito2.png-abe2406a8430b9ecaf292def437c9cb8.ctex"
+uid="uid://cxktkea245rjn"
+path="res://.godot/imported/mesa.png-39f1e63e5a21b26233fc824f511448ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cenarios/Egito2.png"
-dest_files=["res://.godot/imported/Egito2.png-abe2406a8430b9ecaf292def437c9cb8.ctex"]
+source_file="res://assets/Cenarios/mesa.png"
+dest_files=["res://.godot/imported/mesa.png-39f1e63e5a21b26233fc824f511448ba.ctex"]
 
 [params]
 

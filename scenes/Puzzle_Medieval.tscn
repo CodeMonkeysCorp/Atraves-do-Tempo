@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://da4ortkdpwybv"]
 
-[ext_resource type="Texture2D" uid="uid://x0h7hwu1pr8m" path="res://Sprite/Colinas.png" id="1_dxgt4"]
+[ext_resource type="Texture2D" uid="uid://x0h7hwu1pr8m" path="res://assets/Cenarios/Colinas.png" id="1_dxgt4"]
 [ext_resource type="Script" uid="uid://c553cqo4acgwp" path="res://scripts/Puzzle_Medieval.gd" id="1_l0alv"]
-[ext_resource type="Texture2D" uid="uid://bq72fwqrs8kf6" path="res://Sprite/catapulta.png" id="2_4lkbv"]
-[ext_resource type="Texture2D" uid="uid://44k1xvorsnij" path="res://Sprite/Castelo.png" id="4_mr3cr"]
-[ext_resource type="Texture2D" uid="uid://bpbsj3kej3fyb" path="res://Sprite/X.png" id="5_4lkbv"]
+[ext_resource type="Texture2D" uid="uid://bq72fwqrs8kf6" path="res://assets/Cenarios/catapulta.png" id="2_4lkbv"]
+[ext_resource type="Texture2D" uid="uid://44k1xvorsnij" path="res://assets/Cenarios/Castelo.png" id="4_mr3cr"]
+[ext_resource type="Texture2D" uid="uid://bpbsj3kej3fyb" path="res://assets/Cenarios/X.png" id="5_4lkbv"]
 
 [node name="PuzzleMedieval" type="Node2D"]
 script = ExtResource("1_l0alv")

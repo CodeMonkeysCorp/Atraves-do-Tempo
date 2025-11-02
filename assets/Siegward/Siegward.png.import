@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccdklopo5ag4w"
-path="res://.godot/imported/Egito2.png-abe2406a8430b9ecaf292def437c9cb8.ctex"
+uid="uid://lbci2vqq3v2h"
+path="res://.godot/imported/Siegward.png-da59f0a83eb8f4407197119a74ceda52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cenarios/Egito2.png"
-dest_files=["res://.godot/imported/Egito2.png-abe2406a8430b9ecaf292def437c9cb8.ctex"]
+source_file="res://assets/Siegward/Siegward.png"
+dest_files=["res://.godot/imported/Siegward.png-da59f0a83eb8f4407197119a74ceda52.ctex"]
 
 [params]
 

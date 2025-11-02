@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c42wygkeo6i88" path="res://scripts/Npc_Siegward.gd" id="1_wnfvv"]
 [ext_resource type="Texture2D" uid="uid://cldv63txpc85l" path="res://assets/Siegward/NewSiegard.png" id="2_k0q8c"]
-[ext_resource type="Texture2D" uid="uid://cflrj84pcgqsu" path="res://Sprite/SinalInteragir.png" id="2_wnfvv"]
+[ext_resource type="Texture2D" uid="uid://cflrj84pcgqsu" path="res://assets/Cenarios/SinalInteragir.png" id="2_wnfvv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0q8c"]
 size = Vector2(52, 89)
