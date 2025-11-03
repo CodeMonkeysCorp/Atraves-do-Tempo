@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2oct7kgihwpu"]
+[gd_scene load_steps=12 format=3 uid="uid://b2oct7kgihwpu"]
 
 [ext_resource type="Texture2D" uid="uid://cecpafsla3xlc" path="res://assets/Cenarios/Grecia.png" id="1_2pqa2"]
+[ext_resource type="Script" uid="uid://c04qiscrq76u2" path="res://scripts/FaseGrecia.gd" id="1_sxkbx"]
 [ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_2pqa2"]
 [ext_resource type="Script" uid="uid://b2cjt3h785784" path="res://scripts/PuzzleAreaFaseGrecia.gd" id="2_gdfqa"]
 [ext_resource type="PackedScene" uid="uid://cqa46l6im51gy" path="res://scenes/GreciaNpc.tscn" id="4_n4jj8"]
@@ -16,6 +17,7 @@ size = Vector2(122.72, 240.051)
 distance = -224.883
 
 [node name="FaseGrecia" type="Node2D"]
+script = ExtResource("1_sxkbx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10

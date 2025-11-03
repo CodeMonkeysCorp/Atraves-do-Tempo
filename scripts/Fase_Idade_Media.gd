@@ -3,6 +3,10 @@ extends Node2D #BY Matheus Busemayer
 @onready var player = $player
 @onready var camera = $player/Camera2D
 @onready var tela_load = $TelaLoad
+@onready var musicaEgito = $"/root/Musica"
+
+func _ready():
+	Musica.tocar("Medieval")
 
 func teleport_player(destino: Vector2, limites: Dictionary):
 	tela_load.show()

@@ -31,11 +31,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Jogar"
 
-[node name="BtnOpcoes" type="Button" parent="MenuBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 45
-text = "Opções"
-
 [node name="BtnCreditos" type="Button" parent="MenuBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 45

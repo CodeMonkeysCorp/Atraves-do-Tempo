@@ -104,8 +104,8 @@ func _draw():
 				break
 
 		if acertou:
-			print("🎯 Parabéns! Você acertou o alvo!")
 			await get_tree().create_timer(1.5).timeout
+			Musica.parar_todas()
 			GameManager.goto("Creditos")
 		else:
 			print("Errou, tente ajustar os valores!")
