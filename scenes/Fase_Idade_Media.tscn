@@ -144,6 +144,7 @@ position = Vector2(1455, 898)
 scale = Vector2(2.11369, 2.11369)
 
 [node name="InteragirPuzzle" type="Label" parent="player"]
+z_index = 2
 offset_left = -1.41932
 offset_top = 22.236
 offset_right = 171.581
@@ -156,6 +157,7 @@ theme_override_font_sizes/font_size = 32
 text = "<<Puzzle>>"
 
 [node name="Interagir" type="Label" parent="player"]
+z_index = 2
 offset_left = -30.0
 offset_top = 22.0
 offset_right = 185.0

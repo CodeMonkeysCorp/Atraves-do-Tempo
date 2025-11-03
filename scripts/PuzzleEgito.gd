@@ -40,7 +40,7 @@ func _on_btn_confirmar_pressed() -> void:
 		lbl_feedback.show()
 
 func _on_btn_avancar_pressed() -> void:
-	tela_load.show()
-	await get_tree().create_timer(0.9).timeout
-	tela_load.hide()
+	#tela_load.show()
+	#await get_tree().create_timer(0.9).timeout
+	#tela_load.hide()
 	GameManager.goto("FaseGrecia")

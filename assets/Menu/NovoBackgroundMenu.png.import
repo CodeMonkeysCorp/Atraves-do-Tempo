@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf8f2en15b4ks"
-path="res://.godot/imported/Free-Nature-Backgrounds-Pixel-Ar.png-933cd7eaa642d94a6c5962a41f62a7f1.ctex"
+uid="uid://dyuqpcdvdi2rn"
+path="res://.godot/imported/NovoBackgroundMenu.png-003257a54cb97fe88d186a8d67d10bd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cenarios/Free-Nature-Backgrounds-Pixel-Ar.png"
-dest_files=["res://.godot/imported/Free-Nature-Backgrounds-Pixel-Ar.png-933cd7eaa642d94a6c5962a41f62a7f1.ctex"]
+source_file="res://assets/Menu/NovoBackgroundMenu.png"
+dest_files=["res://.godot/imported/NovoBackgroundMenu.png-003257a54cb97fe88d186a8d67d10bd9.ctex"]
 
 [params]
 

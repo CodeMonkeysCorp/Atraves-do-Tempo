@@ -32,9 +32,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 [node name="Dialogo" type="RichTextLabel" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = " O bronze Kosh é muito quebradiço para ser trabalhado corretamente o Artesão Mestre Imothep esta exigindo que o ele seja misturado para não ser jogado fora.
- 
-Resolva a fração para descobrir quanto bronze bom deve ser misturado para o bronze não misturado não seja ruim :"
+text = "O bronze Kosh está muito frágil e não pode ser usado como está. O artesão-mestre Imothep exige que ele seja misturado com bronze puro para não ser desperdiçado.
+
+Resolva a fração para descobrir quanto bronze bom deve ser adicionado para que a liga final fique resistente."
 fit_content = true
 
 [node name="Puzzle" type="VBoxContainer" parent="VBoxContainer"]

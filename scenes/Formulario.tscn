@@ -51,9 +51,9 @@ offset_left = 735.0
 offset_top = 620.0
 offset_right = 1221.0
 offset_bottom = 651.0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
-theme_override_colors/font_hover_pressed_color = Color(0.348381, 0.549391, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.348381, 0.549391, 1, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
 text = "COLEM O LINK DO FORMULARIO AQUI TAMBEM"
 script = ExtResource("3_26ps5")
 

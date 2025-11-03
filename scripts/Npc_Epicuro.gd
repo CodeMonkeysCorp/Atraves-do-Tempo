@@ -59,7 +59,7 @@ func _iniciar_dialogo():
 		player.lock_movement()
 
 	if dialogo_finalizado:
-		fala = 9
+		fala = 13
 	else:
 		fala = 0
 
@@ -82,41 +82,67 @@ func proximo_dialogo():
 func show_dialog():
 	match fala:
 		0:
-			QuemFala.text = "Inácio"
-			label_txt.text = "Ei, você aí! Sim, você mesmo! Parece um viajante esperto, venha cá um instante!"
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Ah, um jovem viajante! Vejo em teus olhos a curiosidade dos sábios."
+
 		1:
-			QuemFala.text = "Luca"
-			label_txt.text = "Oi! Eu? Claro! No que posso ajudar?"
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Dize-me, pequeno, observas este pilar diante de nós?"
+
 		2:
-			QuemFala.text = "Inácio"
-			label_txt.text = "Tenho um pequeno problema de contas... e todos sabem que viajantes são bons com números!"
-		3:
 			QuemFala.text = "Luca"
-			label_txt.text = "Depende... é sobre o quê exatamente?"
+			label_txt.text = "Sim! Ele é bem alto, e tem uma sombra comprida!"
+
+		3:
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Quando o Sol brilha, o pilar projeta essa sombra sobre o chão."
+
 		4:
-			QuemFala.text = "Inácio"
-			label_txt.text = "Naquela mesa ali, há um cálculo com frações que está me tirando o sono!"
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Sei o tamanho do pilar e o comprimento da sombra..."
+
 		5:
-			QuemFala.text = "Inácio"
-			label_txt.text = "Meus empregados estão ocupados demais — então, que tal me dar uma mão, hein?"
+			QuemFala.text = "Epicuro"
+			label_txt.text = "...mas falta descobrir a distância entre o topo do pilar e a ponta da sombra."
+
 		6:
 			QuemFala.text = "Luca"
-			label_txt.text = "Frações, é? Acho que consigo resolver isso pra você!"
+			label_txt.text = "Ah, então é tipo um triângulo! O pilar, a sombra e essa distância!"
+
 		7:
-			QuemFala.text = "Inácio"
-			label_txt.text = "Excelente! Resolva o desafio e eu prometo que serei... digamos, generoso na recompensa!"
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Exato, pequeno filósofo. Essa distância é a hipotenusa."
+
 		8:
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Tua tarefa é calculá-la, usando o Teorema de Pitágoras: h² = pilar² + sombra²."
+
+		9:
+			QuemFala.text = "Luca"
+			label_txt.text = "Entendi! Então é só somar os quadrados e tirar a raiz. Deixa comigo!"
+
+		10:
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Muito bem! Retorna a mim com o valor correto, e te revelarei um segredo da luz e da razão."
+	
+		11:
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Agora concentra-te, jovem viajante. Que comece teu desafio!"
+
+		12:
 			dialogo_finalizado = true
 			interagir_puzzle.monitoring = true
 			_encerrar_dialogo()
-		9:
-			QuemFala.text = "Inácio"
-			label_txt.text = "Ora, ainda não resolveu aquele probleminha de frações?"
-		10:
-			QuemFala.text = "Luca"
-			label_txt.text = "Ainda não... mas tô quase lá!"
-		11:
-			QuemFala.text = "Inácio"
-			label_txt.text = "Vamos, meu jovem! As moedas não se contam sozinhas!"
+		13:
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Ainda não descobriste a resposta, jovem viajante?"
+
+		14:
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Observa bem o pilar e sua sombra... o triângulo guarda o segredo da medida."
+
+		15:
+			QuemFala.text = "Epicuro"
+			label_txt.text = "Volta quando tiveres a hipotenusa. Estou ansioso por tua descoberta!"
 		_:
 			_encerrar_dialogo()

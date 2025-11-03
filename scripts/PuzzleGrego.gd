@@ -28,3 +28,7 @@ func _on_resposta_submitted(text):
 	else:
 		muito_bem_label.hide()
 		btn_avancar.hide()
+
+func _on_btn_avancar_pressed() -> void:
+	print("penis")
+	GameManager.goto("FaseIdadeMedia")

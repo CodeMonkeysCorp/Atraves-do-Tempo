@@ -2,6 +2,7 @@ extends Node2D #BY Matheus Busemayer
 
 @onready var filtroEscuro = $"../Dialogo/LigaDesligaDialogos/Dialogo/FiltroEscuro"
 @onready var caixaDialogo = $"../Dialogo/LigaDesligaDialogos/Dialogo"
+@onready var QuemFala = $"../Dialogo/LigaDesligaDialogos/Dialogo/QuemFala"
 @onready var label_txt = $"../Dialogo/LigaDesligaDialogos/Dialogo/Label"
 @onready var player = get_parent().get_node_or_null("player")
 @onready var interagir_txt = $"../player/Interagir"
@@ -67,7 +68,7 @@ func _iniciar_dialogo():
 	if player and player.has_method("lock_movement"):
 		player.lock_movement()
 	if dialogo_finalizado:
-		fala = 3
+		fala = 7
 	else:
 		fala = 0
 	show_dialog()
@@ -90,20 +91,35 @@ func proximo_dialogo():
 func show_dialog():
 	match fala:
 		0:
-			label_txt.text = "Ei voce seu escudeiro tampinha! Venha aqui"
+			QuemFala.text = "Siegward"
+			label_txt.text = "Ei, você, meu jovem escudeiro! Venha cá."
 		1:
-			label_txt.text = "Precisamos de gente para a catapulta continuar funcionando."
+			QuemFala.text = "Siegward"
+			label_txt.text = "Precisamos de gente para manter a catapulta em funcionamento."
 		2:
-			label_txt.text = "Se o operador da catapulta morrer continue operando no lugar dele. Basta acertar a distancia e a força."
+			QuemFala.text = "Luca"
+			label_txt.text = "Eu posso ajudar! Já usei coisas parecidas antes."
+		3:
+			QuemFala.text = "Siegward"
+			label_txt.text = "Se o operador da catapulta cair, você deve assumir o lugar dele. Basta ajustar a distância e a força corretamente."
+		4:
+			QuemFala.text = "Luca"
+			label_txt.text = "Entendi! É só calcular e mirar, certo?"
+		5:
+			QuemFala.text = "Siegward"
+			label_txt.text = "Exato! Cada erro prolonga o cerco, e não podemos desperdiçar mais meses de esforço."
 			dialogo_finalizado = true
 			if interagir_puzzle:
 				interagir_puzzle.monitoring = true
 			barreira_direita.position.y = 750.0
 			setinha.show()
+		6:
 			_encerrar_dialogo()
-		3:
-			label_txt.text = "Vá e é melhor acertar o alvo. Se continuarmos errando os ultimos 3 meses de cerco se reduzidos à um disperdiçados."
+		7:
+			QuemFala.text = "Siegward"
+			label_txt.text = "Vá! Ajuste bem a força e a distância. O sucesso do ataque depende de você."
+		8:
+			QuemFala.text = "Luca"
+			label_txt.text = "Pode deixar, Siegward! Vou fazer o meu melhor!"
 		_:
 			_encerrar_dialogo()
-		
-	
