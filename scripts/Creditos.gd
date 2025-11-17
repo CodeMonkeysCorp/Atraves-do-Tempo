@@ -36,4 +36,6 @@ func _input(event: InputEvent) -> void:
 func btn_clique(btn: TextureButton) -> void:
 	print("Função do botão: ", btn.name)
 	if btn.name == "BtnVoltar":
-		GameManager.goto("MainMenu")
+		GameManager.goto("Formulario")
+	if btn.name == "BtnDados":
+		GameManager.goto("DadosDaGameplay")

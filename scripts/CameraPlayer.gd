@@ -1,9 +1,8 @@
-# Camera
-extends Camera2D
+extends Camera2D #BY Matheus Busemayer
 
 @export var player: NodePath
-@export var zoom_normal: Vector2 = Vector2(1.2, 1.2)
-@export var zoom_olhar: Vector2 = Vector2(0.75, 0.75)
+@export var zoom_normal: Vector2 = Vector2(1.6, 1.6)
+@export var zoom_olhar: Vector2 = Vector2(1, 1)
 
 @export var limite_esquerda: int = 0
 @export var limite_direita: int = 1910

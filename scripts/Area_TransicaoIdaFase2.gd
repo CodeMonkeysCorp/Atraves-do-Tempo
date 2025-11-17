@@ -16,7 +16,7 @@ extends Area2D# BY Matheus Busemayer
 
 @export var modo_retorno: bool = false
 @export var camera_pos_destino_puzzle: Vector2 = Vector2(3400, 898)   # CÂMERA NO PUZZLE
-@export var player_pos_destino_puzzle: Vector2 = Vector2(2850, 898)   # TELEPORTE DO PLAYER NO PUZZLE
+@export var player_pos_destino_puzzle: Vector2 = Vector2(2950, 898)   # TELEPORTE DO PLAYER NO PUZZLE
 @export var camera_pos_destino_fase: Vector2 = Vector2(1455, 898)     #  CÂMERA NA FASE
 @export var player_pos_destino_fase: Vector2 = Vector2(1355, 898)     # TELEPORTE DO PLAYER NA FASE
 

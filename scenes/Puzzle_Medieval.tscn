@@ -1,29 +1,29 @@
 [gd_scene load_steps=6 format=3 uid="uid://da4ortkdpwybv"]
 
-[ext_resource type="Texture2D" uid="uid://c0vct45birdsj" path="res://Sprite/Colinas.png" id="1_dxgt4"]
+[ext_resource type="Texture2D" uid="uid://x0h7hwu1pr8m" path="res://assets/Cenarios/Colinas.png" id="1_dxgt4"]
 [ext_resource type="Script" uid="uid://c553cqo4acgwp" path="res://scripts/Puzzle_Medieval.gd" id="1_l0alv"]
-[ext_resource type="Texture2D" uid="uid://c6kg8ivrmilyd" path="res://Sprite/catapulta.png" id="2_4lkbv"]
-[ext_resource type="Texture2D" uid="uid://cwr3got7iaw22" path="res://Sprite/Castelo.png" id="4_mr3cr"]
-[ext_resource type="Texture2D" uid="uid://csn014aq05mf" path="res://Sprite/X.png" id="5_4lkbv"]
+[ext_resource type="Texture2D" uid="uid://bq72fwqrs8kf6" path="res://assets/Cenarios/catapulta.png" id="2_4lkbv"]
+[ext_resource type="Texture2D" uid="uid://44k1xvorsnij" path="res://assets/Cenarios/Castelo.png" id="4_mr3cr"]
+[ext_resource type="Texture2D" uid="uid://bpbsj3kej3fyb" path="res://assets/Cenarios/X.png" id="5_4lkbv"]
 
 [node name="PuzzleMedieval" type="Node2D"]
 script = ExtResource("1_l0alv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10
-position = Vector2(685, 391)
-scale = Vector2(0.889, 0.754)
+position = Vector2(601, 404)
+scale = Vector2(1.22691, 0.778536)
 texture = ExtResource("1_dxgt4")
 
 [node name="Catapulta" type="Sprite2D" parent="."]
 position = Vector2(223, 646)
 rotation = -0.0994838
-scale = Vector2(0.73, 0.73)
+scale = Vector2(0.77924776, 0.8889809)
 texture = ExtResource("2_4lkbv")
 
 [node name="Castelo" type="Sprite2D" parent="."]
-position = Vector2(1136, 464)
-scale = Vector2(1.153, 1.195)
+position = Vector2(1171, 421)
+scale = Vector2(1.4270248, 1.5479255)
 texture = ExtResource("4_mr3cr")
 
 [node name="Marcacao" type="Sprite2D" parent="Castelo"]
@@ -98,3 +98,27 @@ offset_right = 435.0
 offset_bottom = 52.0
 scale = Vector2(1.26707, 1.42437)
 text = "Confirmar"
+
+[node name="Errou" type="Label" parent="Variaveis"]
+visible = false
+layout_mode = 0
+offset_left = -114.0
+offset_top = -38.0
+offset_right = -63.0
+offset_bottom = -12.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Errou"
+
+[node name="Dica" type="Label" parent="Variaveis"]
+visible = false
+layout_mode = 0
+offset_left = -140.0
+offset_top = -68.0
+offset_right = -43.0
+offset_bottom = -45.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "Dica 1: Tente "

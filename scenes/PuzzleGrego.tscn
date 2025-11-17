@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhmsx00dios8y"]
+[gd_scene load_steps=6 format=3 uid="uid://bhmsx00dios8y"]
 
-[ext_resource type="Script" path="res://scripts/PuzzleGrego.gd" id="1_k10ag"]
-[ext_resource type="Texture2D" uid="uid://cecpafsla3xlc" path="res://Sprite/Grecia.png" id="2_k10ag"]
-[ext_resource type="Texture2D" uid="uid://dioofty6xleka" path="res://Sprite/Pilar.png" id="3_1hheu"]
+[ext_resource type="Script" uid="uid://c8odmv3sb1ms6" path="res://scripts/PuzzleGrego.gd" id="1_k10ag"]
+[ext_resource type="Texture2D" uid="uid://cecpafsla3xlc" path="res://assets/Cenarios/Grecia.png" id="2_k10ag"]
+[ext_resource type="Texture2D" uid="uid://dioofty6xleka" path="res://assets/Cenarios/Pilar.png" id="3_1hheu"]
+[ext_resource type="Texture2D" uid="uid://dq4floju7poa4" path="res://assets/Cenarios/SinalPuzzle.png" id="4_1hheu"]
+[ext_resource type="Texture2D" uid="uid://bf6lwcvxd0m5g" path="res://assets/Cenarios/ChatGPT Image 15_11_2025, 18_56_59.png" id="5_whktd"]
 
 [node name="PuzzleGrega" type="Node2D"]
+scale = Vector2(1.4082416, 1.3827814)
 script = ExtResource("1_k10ag")
 
 [node name="Atenas sla" type="Sprite2D" parent="."]
@@ -34,9 +37,9 @@ horizontal_alignment = 1
 
 [node name="Resposta" type="LineEdit" parent="Variaveis"]
 layout_mode = 0
-offset_left = 1040.0
+offset_left = 990.0
 offset_top = 552.0
-offset_right = 1108.5625
+offset_right = 1060.0
 offset_bottom = 583.0
 scale = Vector2(2, 2)
 placeholder_text = "R:"
@@ -53,15 +56,17 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Muito Bem!"
 horizontal_alignment = 1
 
-[node name="C" type="Label" parent="Variaveis"]
+[node name="Dica" type="Label" parent="Variaveis"]
+visible = false
 layout_mode = 0
-offset_left = 979.0
-offset_top = 560.0
-offset_right = 1007.0
-offset_bottom = 583.0
-scale = Vector2(2, 2)
+offset_left = 760.5229
+offset_top = 637.84485
+offset_right = 1144.523
+offset_bottom = 686.84485
+scale = Vector2(1.5, 1.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "C = "
+text = "Dica 1: Considere o tamanho da sombra como o A
+"
 horizontal_alignment = 1
 
 [node name="BtnAvancar" type="Button" parent="Variaveis"]
@@ -72,6 +77,27 @@ offset_right = 1073.0
 offset_bottom = 715.0
 scale = Vector2(2, 2)
 text = "Avançar"
+
+[node name="BtnConfirmar" type="Button" parent="Variaveis"]
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 552.0
+offset_right = 1240.0
+offset_bottom = 583.0
+scale = Vector2(2, 2)
+text = "Confirmar
+"
+
+[node name="C=" type="Label" parent="Variaveis"]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 554.679
+offset_right = 959.0
+offset_bottom = 577.679
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "C ="
+horizontal_alignment = 1
 
 [node name="Pilar" type="Sprite2D" parent="."]
 z_index = 1
@@ -155,19 +181,24 @@ size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3 Metros"
 
-[node name="Line2D" type="Line2D" parent="."]
-points = PackedVector2Array(595, 231, 312, 537)
-width = 2.0
+[node name="LinhaVermelha" type="Line2D" parent="."]
+position = Vector2(255.63794, 574.20496)
+rotation = -0.7521961
+points = PackedVector2Array(0, 0, 500, 0)
+width = 11.0
 default_color = Color(1, 0, 0, 1)
 
-[node name="Line2D2" type="Line2D" parent="."]
-position = Vector2(7, 18)
-points = PackedVector2Array(374, 218, 390, 203, 409, 198, 434, 202, 445, 208, 450, 225, 451, 240, 442, 257, 431, 262, 417, 274, 408, 294, 408, 311)
-width = 2.0
-default_color = Color(1, 0, 0, 1)
+[node name="SinalPuzzle" type="Sprite2D" parent="."]
+position = Vector2(458.018, 314.58334)
+scale = Vector2(0.10834141, 0.094377264)
+texture = ExtResource("4_1hheu")
 
-[node name="Line2D3" type="Line2D" parent="."]
-position = Vector2(7, 18)
-points = PackedVector2Array(407, 318, 406, 323)
-width = 2.0
-default_color = Color(1, 0, 0, 1)
+[node name="LinhaAmarela" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(451.53217, 390.52795)
+rotation = -0.8298074
+scale = Vector2(0.36955327, 0.121106036)
+texture = ExtResource("5_whktd")
+
+[connection signal="pressed" from="Variaveis/BtnAvancar" to="." method="_on_btn_avancar_pressed"]
+[connection signal="pressed" from="Variaveis/BtnConfirmar" to="." method="_on_btn_confirmar_pressed"]

@@ -6,67 +6,63 @@ extends Control
 @onready var btn_confirmar    = $VBoxContainer/Puzzle/HBoxContainer/BtnConfirmar
 @onready var lbl_feedback     = $VBoxContainer/Puzzle/LabelFeedback
 @onready var btn_avancar      = $VBoxContainer/Puzzle/BtnAvancar
+@onready var tela_load        = $TelaLoad
+@onready var label_dica       = $VBoxContainer/Puzzle/LabelDica
 
-@onready var Dica1 = $Dica1
-@onready var Dica2 = $Dica2
-@onready var Dica3 = $Dica3
-
-var erros = 0
+var tempo_inicio: float
 
 func _ready():
+	if tela_load:
+		tela_load.hide()
 	lbl_feedback.hide()
 	btn_avancar.disabled = true
-	Dica1.hide()
-	Dica2.hide()
-	Dica3.hide()
+	tempo_inicio = Time.get_ticks_msec()
 
-
-# --- Função auxiliar para checar frações equivalentes ---
 func _eh_equivalente(resposta: String, alvo: String) -> bool:
 	if not resposta.contains("/"):
 		return false
-
 	var partes_resposta = resposta.split("/")
 	var partes_alvo = alvo.split("/")
-
 	if partes_resposta.size() != 2 or partes_alvo.size() != 2:
 		return false
-
 	var num_r = partes_resposta[0].to_int()
 	var den_r = partes_resposta[1].to_int()
 	var num_a = partes_alvo[0].to_int()
 	var den_a = partes_alvo[1].to_int()
-
 	if den_r == 0 or den_a == 0:
 		return false
-
 	return num_r * den_a == num_a * den_r
 
-
 func _on_btn_confirmar_pressed() -> void:
-	var resposta = entrada_resposta.text.strip_edges()
-	print(resposta)
-	
+		var resposta = entrada_resposta.text.strip_edges()
 	if _eh_equivalente(resposta, "5/6"):
 		lbl_feedback.text = "Muito bem!"
 		lbl_feedback.show()
 		btn_avancar.disabled = false
+		GameManager.tentativasEgito += 1
+		var tempo_total = (Time.get_ticks_msec() - tempo_inicio) / 1000.0
+		GameManager.registrar_tempo("PuzzleEgito", tempo_total)
 	else:
-		erros += 1
 		lbl_feedback.text = "Tente novamente!"
 		lbl_feedback.show()
+		GameManager.tentativasEgito += 1
 		_mostrar_dica()
-		
 
 func _mostrar_dica():
-	if erros == 1:
-		Dica1.show()
-	elif erros == 2:
-		Dica2.show()
-	elif erros >= 3:
-		Dica3.show()
-
+	if GameManager.tentativasEgito < 4 and GameManager.tentativasEgito >= 2:
+		label_dica.show()
+		GameManager.dicasEgito += 1
+		
+	if GameManager.tentativasEgito < 6 and GameManager.tentativasEgito >= 4:
+		label_dica.text = "Dica 2: Use o Mínimo Multiplo Comum das bases nas frações"
+		GameManager.dicasEgito += 1
+		
+	if GameManager.tentativasEgito >= 6:
+		label_dica.text = "Dica 3: Transforme as frações para Sextos. EX: 1/2 = 3/6"
+		GameManager.dicasEgito += 1
 
 func _on_btn_avancar_pressed() -> void:
-	GameManager.goto("FaseIdadeMedia")
-	print("Finalizou Fase 1 - Egito")
+	#tela_load.show()
+	#await get_tree().create_timer(0.9).timeout
+	#tela_load.hide()
+	GameManager.goto("FaseGrecia")

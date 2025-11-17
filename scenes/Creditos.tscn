@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8hejxdtiaslo"]
 
-[ext_resource type="Texture2D" uid="uid://bmyj6ijkto62w" path="res://assets/Cenarios/Egito2.png" id="1_lm0yj"]
+[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://assets/Cenarios/Egito2.png" id="1_lm0yj"]
 [ext_resource type="Texture2D" uid="uid://bw23u3fodmv5e" path="res://assets/Menu/Menu.png" id="2_dc0wp"]
 [ext_resource type="Script" uid="uid://b1cia8nmqqjdb" path="res://scripts/Creditos.gd" id="3_p1hgr"]
 [ext_resource type="Texture2D" uid="uid://dv307y15bk3v2" path="res://assets/Menu/Sair.png" id="3_rnov5"]
@@ -69,6 +69,11 @@ scale = Vector2(0.218574, 0.218574)
 theme_override_constants/separation = 60
 
 [node name="BtnVoltar" type="TextureButton" parent="MenuBox"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("3_rnov5")
+
+[node name="BtnDados" type="TextureButton" parent="MenuBox"]
 layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("3_rnov5")
