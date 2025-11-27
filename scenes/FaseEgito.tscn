@@ -1,20 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcestwq5ori37"]
+[gd_scene load_steps=14 format=3 uid="uid://dcestwq5ori37"]
 
-[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://Sprite/Egito2.png" id="1_3cc5n"]
+[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://assets/Cenarios/Egito2.png" id="1_3cc5n"]
+[ext_resource type="Script" uid="uid://dkek40i36kpsu" path="res://scripts/FaseEgito.gd" id="1_melst"]
 [ext_resource type="Script" uid="uid://cocmpmutbdulg" path="res://scripts/PuzzleAreaFase1.gd" id="2_81n4k"]
 [ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_kmvkh"]
-[ext_resource type="Texture2D" uid="uid://rgioxxvel83c" path="res://Sprite/placa.png" id="3_gmhaf"]
-[ext_resource type="Texture2D" uid="uid://s03roinj7iq4" path="res://Sprite/meas.png" id="4_81n4k"]
-[ext_resource type="Texture2D" uid="uid://ca7t6346t5su6" path="res://Sprite/DialogoTESTE6.png" id="4_kmvkh"]
-[ext_resource type="PackedScene" uid="uid://flykwqdqh3rm" path="res://scenes/Npc.tscn" id="5_kpb4j"]
+[ext_resource type="Texture2D" uid="uid://it0t7ly2wd3a" path="res://assets/Cenarios/placa.png" id="3_gmhaf"]
+[ext_resource type="Texture2D" uid="uid://cxktkea245rjn" path="res://assets/Cenarios/mesa.png" id="4_81n4k"]
+[ext_resource type="PackedScene" uid="uid://flykwqdqh3rm" path="res://scenes/EgitoNpc.tscn" id="5_kpb4j"]
+[ext_resource type="Texture2D" uid="uid://dq4floju7poa4" path="res://assets/Cenarios/SinalPuzzle.png" id="6_a4ynv"]
+[ext_resource type="Texture2D" uid="uid://bgwldlrhky2pu" path="res://assets/Cenarios/CaixaDeDialogo.png" id="6_kpb4j"]
+[ext_resource type="Texture2D" uid="uid://cxmlfx7oyilei" path="res://assets/Luca/Luca pensando sem perna.PNG" id="7_melst"]
+[ext_resource type="Texture2D" uid="uid://dt8yn0v1ukdon" path="res://assets/Inacio/Background Eraser.png" id="8_a4ynv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpb4j"]
-size = Vector2(168.439, 218.314)
+size = Vector2(122.72, 240.051)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2roj"]
 distance = -224.883
 
 [node name="FaseEgito" type="Node2D"]
+script = ExtResource("1_melst")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10
@@ -27,8 +32,7 @@ position = Vector2(-65.3705, 12.9949)
 script = ExtResource("2_81n4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AreaPuzzle"]
-position = Vector2(167.637, 337.867)
-scale = Vector2(1, 1)
+position = Vector2(170.445, 351.57)
 shape = SubResource("RectangleShape2D_kpb4j")
 
 [node name="Placa" type="Sprite2D" parent="Sprite2D/AreaPuzzle"]
@@ -41,11 +45,17 @@ position = Vector2(155.606, 388.428)
 scale = Vector2(0.111938, 0.139074)
 texture = ExtResource("4_81n4k")
 
+[node name="SinalPuzzle" type="Sprite2D" parent="Sprite2D/AreaPuzzle"]
+position = Vector2(171.64764, 172.94984)
+scale = Vector2(0.0904488, 0.08183337)
+texture = ExtResource("6_a4ynv")
+
 [node name="player" parent="." instance=ExtResource("2_kmvkh")]
 position = Vector2(200, 908)
-scale = Vector2(2.11369, 2.11369)
+scale = Vector2(1.535058, 1.7669199)
 
 [node name="InteragirPuzzle" type="Label" parent="player"]
+z_index = 2
 offset_left = -1.41932
 offset_top = 22.236
 offset_right = 171.581
@@ -57,6 +67,7 @@ theme_override_font_sizes/font_size = 32
 text = "<<Puzzle>>"
 
 [node name="Interagir" type="Label" parent="player"]
+z_index = 2
 offset_left = -30.0
 offset_top = 22.0
 offset_right = 185.0
@@ -72,34 +83,67 @@ follow_viewport_enabled = true
 
 [node name="LigaDesligaDialogos" type="Sprite2D" parent="Dialogo"]
 
-[node name="FiltroEscuro" type="ColorRect" parent="Dialogo/LigaDesligaDialogos"]
-visible = false
-offset_right = 1920.0
-offset_bottom = 1080.0
+[node name="Dialogo" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos"]
+z_index = 1
+position = Vector2(1328, 935)
+scale = Vector2(0.466194, 0.518249)
+texture = ExtResource("6_kpb4j")
+
+[node name="FiltroEscuro" type="ColorRect" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+z_index = -1
+offset_left = -2848.6
+offset_top = -1804.15
+offset_right = -928.6
+offset_bottom = -724.152
+scale = Vector2(2.8346, 2.47635)
 size_flags_stretch_ratio = 0.0
 color = Color(0, 0, 0, 0.431373)
 
-[node name="Dialogo" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos"]
-z_index = -1
-position = Vector2(1330, 882)
-scale = Vector2(1.14339, 1.22701)
-texture = ExtResource("4_kmvkh")
-
 [node name="Label" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
 anchors_preset = -1
-anchor_left = -0.0356063
-anchor_top = -0.0565605
-anchor_right = 0.0925187
-anchor_bottom = -0.0565605
-offset_left = -229.458
-offset_top = 41.7906
-offset_right = 949.542
-offset_bottom = 101.791
-scale = Vector2(0.391364, 0.864029)
+anchor_left = -0.0356074
+anchor_top = -0.0568998
+anchor_right = 0.820643
+anchor_bottom = 0.130137
+offset_left = -516.6338
+offset_top = -13.548214
+offset_right = 662.36646
+offset_bottom = 139.45204
+scale = Vector2(0.399415, 0.59157604)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 108
+autowrap_mode = 2
 max_lines_visible = 100
 metadata/_edit_use_anchors_ = true
+
+[node name="Luca" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+position = Vector2(-864.447, -84.9014)
+scale = Vector2(0.576795, 0.503464)
+texture = ExtResource("7_melst")
+flip_h = true
+
+[node name="NpcInacio" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+position = Vector2(825.837, -59.8169)
+scale = Vector2(0.798244, 0.658284)
+texture = ExtResource("8_a4ynv")
+
+[node name="Pular" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+offset_left = 373.235
+offset_top = 179.45
+offset_right = 566.235
+offset_bottom = 246.45
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+text = "PULAR..."
+
+[node name="QuemFala" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+offset_left = -102.961
+offset_top = -248.915
+offset_right = 83.0386
+offset_bottom = -160.915
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "Inacio"
 
 [node name="npc" parent="." instance=ExtResource("5_kpb4j")]
 z_index = -1

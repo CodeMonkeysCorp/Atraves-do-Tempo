@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://lmdc8xgngb3o"]
+[gd_scene load_steps=5 format=3 uid="uid://lmdc8xgngb3o"]
 
 [ext_resource type="Script" uid="uid://dt7ji6gxgqpo3" path="res://scripts/MainMenu.gd" id="1_0ykhv"]
-[ext_resource type="Texture2D" uid="uid://4uayhfskpa4" path="res://assets/Cenarios/Egito de longe.png" id="2_2wh52"]
+[ext_resource type="Texture2D" uid="uid://dyuqpcdvdi2rn" path="res://assets/Menu/NovoBackgroundMenu.png" id="2_0ykhv"]
+[ext_resource type="Texture2D" uid="uid://clqipwev220mt" path="res://assets/Cenarios/domain.png" id="3_2wh52"]
 
-[sub_resource type="FontVariation" id="FontVariation_brnl1"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykhv"]
+bg_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="MainMenu" type="Node2D"]
+scale = Vector2(1.0000567, 1.0002669)
 script = ExtResource("1_0ykhv")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -16,35 +23,21 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_2wh52")
+texture = ExtResource("2_0ykhv")
 stretch_mode = 6
-
-[node name="Label" type="Label" parent="."]
-offset_left = 125.0
-offset_top = 75.0
-offset_right = 781.0
-offset_bottom = 284.0
-theme_override_fonts/font = SubResource("FontVariation_brnl1")
-theme_override_font_sizes/font_size = 75
-text = "Matemática
-Através do Tempo"
 
 [node name="MenuBox" type="VBoxContainer" parent="."]
 offset_left = 125.0
 offset_top = 400.0
 offset_right = 525.0
 offset_bottom = 950.0
+scale = Vector2(1.2, 1.2)
 theme_override_constants/separation = 60
 
 [node name="BtnJogar" type="Button" parent="MenuBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Jogar"
-
-[node name="BtnOpcoes" type="Button" parent="MenuBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 45
-text = "Opções"
 
 [node name="BtnCreditos" type="Button" parent="MenuBox"]
 layout_mode = 2
@@ -55,3 +48,25 @@ text = "Créditos"
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Sair"
+
+[node name="BtnFeedBack" type="Button" parent="."]
+offset_left = 47.997276
+offset_top = 999.73315
+offset_right = 531.9973
+offset_bottom = 1064.733
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.38039216, 0.8862745, 1)
+theme_override_colors/font_hover_color = Color(0, 0.38039216, 0.8862745, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.38039216, 0.8862745, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.38039216, 0.8862745, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.38039216, 0.8862745, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.38039216, 0.8862745, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 45
+theme_override_icons/icon = ExtResource("3_2wh52")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ykhv")
+text = "Deixe um Feedback!"
+flat = true
+
+[connection signal="pressed" from="BtnFeedBack" to="." method="_on_btn_feed_back_pressed"]

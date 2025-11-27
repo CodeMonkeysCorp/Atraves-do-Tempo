@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c13d5mr7xjmag"]
 
-[ext_resource type="Texture2D" uid="uid://lbci2vqq3v2h" path="res://Sprite/Siegward.png" id="1_a1vpk"]
 [ext_resource type="Script" uid="uid://c42wygkeo6i88" path="res://scripts/Npc_Siegward.gd" id="1_wnfvv"]
-[ext_resource type="Texture2D" uid="uid://ceuxcdq0je5kt" path="res://Sprite/SinalInteragir.png" id="2_wnfvv"]
+[ext_resource type="Texture2D" uid="uid://cldv63txpc85l" path="res://assets/Siegward/NewSiegard.png" id="2_k0q8c"]
+[ext_resource type="Texture2D" uid="uid://cflrj84pcgqsu" path="res://assets/Cenarios/SinalInteragir.png" id="2_wnfvv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0q8c"]
 size = Vector2(52, 89)
@@ -22,15 +22,15 @@ shape = SubResource("RectangleShape2D_k0q8c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(-7.75795, -9.15898)
-scale = Vector2(0.0700437, 0.0632863)
-texture = ExtResource("1_a1vpk")
+scale = Vector2(0.0592048, 0.0613473)
+texture = ExtResource("2_k0q8c")
 
 [node name="CollisionShapeAreaTalk" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(4.19775, -9.49999)
 shape = SubResource("RectangleShape2D_kau7r")
 
 [node name="SinalInteragir" type="Sprite2D" parent="."]
-position = Vector2(8, -53)
+position = Vector2(-11, -68)
 scale = Vector2(0.0246075, 0.0352112)
 texture = ExtResource("2_wnfvv")
 flip_h = true

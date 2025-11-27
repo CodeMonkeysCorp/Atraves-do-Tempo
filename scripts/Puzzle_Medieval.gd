@@ -4,6 +4,8 @@ extends Node2D #BY Matheus Busemayer
 @onready var valorA = $Variaveis/A
 @onready var valorB = $Variaveis/B
 @onready var botao_confirmar = $Variaveis/BotaoConfirmar
+@onready var feedback = $Variaveis/Errou
+@onready var label_dica = $Variaveis/Dica
 
 var offsetCatapulta = Vector2(-130, -40)
 var confirmar_press = false
@@ -11,12 +13,12 @@ var pontos_trajetoria: Array = []
 var pode_confirmar = true
 var impacto_visual: Vector2 = Vector2.ZERO
 
-# 🔵 --- DEFINIÇÃO DA ÁREA DE ACERTO (mude aqui) ---
-# posição do centro do alvo
 var alvo_centro = Vector2(1055, 390)
-# tamanho do raio (quanto maior, mais fácil acertar)
 var alvo_raio = 35.0
-# 🔵 --- FIM DAS CONFIGURAÇÕES DO ALVO ---
+var tempo_inicio: float
+
+var dica_1 = false
+var dica_2 = false
 
 func _ready():
 	botao_confirmar.pressed.connect(_on_botao_confirmar_pressed)
@@ -59,13 +61,9 @@ func gerar_trajetoria():
 
 	queue_redraw()
 
-
-# 🔵 Verifica se um ponto está dentro da área de acerto definida por coordenadas
 func ponto_dentro_area(ponto: Vector2) -> bool:
 	return ponto.distance_to(alvo_centro) <= alvo_raio
 
-
-# Verifica se a linha entre dois pontos cruza a área
 func linha_perto_da_area(p1: Vector2, p2: Vector2, passos := 20) -> bool:
 	for i in range(passos + 1):
 		var t = i / float(passos)
@@ -75,21 +73,16 @@ func linha_perto_da_area(p1: Vector2, p2: Vector2, passos := 20) -> bool:
 			return true
 	return false
 
-
-# Desenha a trajetória e o alvo
 func _draw():
-	# desenha pontos da trajetória
-	for p in pontos_trajetoria:
+	for i in range(min(16, pontos_trajetoria.size())):
+		var p = pontos_trajetoria[i]
 		draw_circle(p["pos"], p["radius"], Color(0.772, 0.0, 0.0, 1.0))
 
-	# desenha o alvo (círculo azul translúcido)
 	draw_circle(alvo_centro, alvo_raio, Color(0, 0, 0, 0.0))
 
-	# desenha o impacto se houver acerto
 	if impacto_visual != Vector2.ZERO:
 		draw_circle(impacto_visual, 8, Color(0, 1, 0))
 
-	# quando o botão é pressionado, testa a trajetória
 	if confirmar_press and pontos_trajetoria.size() > 0:
 		var todos_pontos = []
 		for p in pontos_trajetoria:
@@ -101,23 +94,40 @@ func _draw():
 		for i in range(todos_pontos.size() - 1):
 			if linha_perto_da_area(todos_pontos[i], todos_pontos[i + 1]):
 				acertou = true
+				feedback.text = "Acertou"
+				feedback.show()
 				break
 
 		if acertou:
-			print("🎯 Parabéns! Você acertou o alvo!")
 			await get_tree().create_timer(1.5).timeout
+			Musica.parar_todas()
+			var tempo_total = (Time.get_ticks_msec() - tempo_inicio) / 1000.0
+			GameManager.registrar_tempo("PuzzleIdadeMedia", tempo_total)
 			GameManager.goto("Creditos")
+			GameManager.contar_dicas_IdadeMedia(dica_1, dica_2)
+			GameManager.tentativasIdadeMedia += 1
 		else:
 			print("Errou, tente ajustar os valores!")
-
+			feedback.show()
+			await get_tree().create_timer(1.0).timeout
+			feedback.hide()
+			GameManager.tentativasIdadeMedia += 1
+			_mostrar_dica()
+			
 		confirmar_press = false
 
+func _mostrar_dica():
+	print(GameManager.tentativasIdadeMedia)
+	if GameManager.tentativasIdadeMedia < 5 and GameManager.tentativasIdadeMedia >= 2:
+		label_dica.show()
+		dica_1 = true
+	if GameManager.tentativasIdadeMedia >= 5:
+		label_dica.text = "Dica 2: Use o Mínimo Multiplo Comum das bases nas frações"
+		dica_2 = true
 
-# Adiciona delay de 1.5s entre confirmações
 func _on_botao_confirmar_pressed():
 	if not pode_confirmar:
 		return
-
 	pode_confirmar = false
 	confirmar_press = true
 	gerar_trajetoria()

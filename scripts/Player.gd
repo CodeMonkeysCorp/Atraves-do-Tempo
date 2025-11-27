@@ -9,6 +9,7 @@ var can_move: bool = true
 
 func _ready() -> void:
 	interagir_puzzle_label.hide()
+	interagir_label.hide()
 	
 func interagirShow():
 	if interagir_label:
