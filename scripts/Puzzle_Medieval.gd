@@ -27,11 +27,11 @@ func _ready():
 func gerar_trajetoria():
 	pontos_trajetoria.clear()
 
-	var step = 0.8
+	var step = 0.1        # <<< ALTERADO AQUI
 	var scale = 60
-	var base_spacing = 10.0
+	var base_spacing = 4.0
 	var base_radius = 6.0
-	var radius_decay = 0.15
+	var radius_decay = 0.05
 
 	var a_text = valorA.text.strip_edges()
 	var b_text = valorB.text.strip_edges()
@@ -61,8 +61,10 @@ func gerar_trajetoria():
 
 	queue_redraw()
 
+
 func ponto_dentro_area(ponto: Vector2) -> bool:
 	return ponto.distance_to(alvo_centro) <= alvo_raio
+
 
 func linha_perto_da_area(p1: Vector2, p2: Vector2, passos := 20) -> bool:
 	for i in range(passos + 1):
@@ -73,16 +75,24 @@ func linha_perto_da_area(p1: Vector2, p2: Vector2, passos := 20) -> bool:
 			return true
 	return false
 
-func _draw():
-	for i in range(min(16, pontos_trajetoria.size())):
-		var p = pontos_trajetoria[i]
-		draw_circle(p["pos"], p["radius"], Color(0.772, 0.0, 0.0, 1.0))
 
+func _draw():
+	# --- DESENHAR A LINHA DA TRAJETÓRIA ---
+	if pontos_trajetoria.size() >= 2:
+		for i in range(pontos_trajetoria.size() - 1):
+			var p1 = pontos_trajetoria[i]["pos"]
+			var p2 = pontos_trajetoria[i + 1]["pos"]
+			draw_line(p1, p2, Color(0.8, 0, 0), 3.0)
+
+	# --- DESENHA ALVO ---
 	draw_circle(alvo_centro, alvo_raio, Color(0, 0, 0, 0.0))
 
+	# --- DESENHA LOCAL DO IMPACTO ---
 	if impacto_visual != Vector2.ZERO:
 		draw_circle(impacto_visual, 8, Color(0, 1, 0))
 
+
+	# --- VERIFICAÇÃO DE ACERTO QUANDO APERTA O BOTÃO ---
 	if confirmar_press and pontos_trajetoria.size() > 0:
 		var todos_pontos = []
 		for p in pontos_trajetoria:
@@ -116,14 +126,15 @@ func _draw():
 			
 		confirmar_press = false
 
+
 func _mostrar_dica():
-	print(GameManager.tentativasIdadeMedia)
 	if GameManager.tentativasIdadeMedia < 5 and GameManager.tentativasIdadeMedia >= 2:
 		label_dica.show()
 		dica_1 = true
 	if GameManager.tentativasIdadeMedia >= 5:
 		label_dica.text = "Dica 2: Use o Mínimo Multiplo Comum das bases nas frações"
 		dica_2 = true
+
 
 func _on_botao_confirmar_pressed():
 	if not pode_confirmar:

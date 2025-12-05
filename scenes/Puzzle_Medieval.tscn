@@ -27,7 +27,7 @@ scale = Vector2(1.4270248, 1.5479255)
 texture = ExtResource("4_mr3cr")
 
 [node name="Marcacao" type="Sprite2D" parent="Castelo"]
-position = Vector2(-66.7823, -61.0879)
+position = Vector2(-69.37508, -0.6460266)
 scale = Vector2(0.137034, 0.132218)
 texture = ExtResource("5_4lkbv")
 
@@ -87,7 +87,7 @@ offset_right = 345.0
 offset_bottom = 64.0
 scale = Vector2(2, 2)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "X
+text = "x
 "
 
 [node name="BotaoConfirmar" type="Button" parent="Variaveis"]
@@ -121,4 +121,4 @@ offset_bottom = -45.0
 scale = Vector2(2, 2)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 15
-text = "Dica 1: Tente "
+text = "Dica 1: \"A\" governa gravidade e pode ser um número decimal."

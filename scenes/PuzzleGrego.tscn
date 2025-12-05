@@ -118,8 +118,8 @@ scale = Vector2(0.32958984, 0.32958984)
 texture = ExtResource("3_1hheu")
 
 [node name="Sombra" type="Polygon2D" parent="."]
-position = Vector2(-72.430756, -510.5652)
-scale = Vector2(1.0950198, 2.0268252)
+position = Vector2(39.508675, -510.5652)
+scale = Vector2(0.9228053, 2.0268252)
 color = Color(0, 0, 0, 0.35686275)
 polygon = PackedVector2Array(650, 488, 599, 488, 588, 496, 325, 496, 316, 491, 314, 484, 295, 484, 295.00006, 518.0656, 295, 554, 314, 554, 316, 547, 325, 542, 588, 542, 599, 550, 650, 550)
 
@@ -194,15 +194,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3 Metros"
 
 [node name="SinalPuzzle" type="Sprite2D" parent="."]
-position = Vector2(458.018, 314.58334)
+position = Vector2(433.1643, 342.78735)
 scale = Vector2(0.10834141, 0.094377264)
 texture = ExtResource("4_1hheu")
 
 [node name="LinhaAmarela" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(423.2228, 412.93582)
-rotation = -0.79310125
-scale = Vector2(0.42049307, 0.121106036)
+position = Vector2(452.09146, 420.04642)
+rotation = -0.9250245
+scale = Vector2(0.3969975, 0.10534418)
 texture = ExtResource("5_whktd")
 
 [connection signal="pressed" from="Variaveis/BtnConfirmar" to="." method="_on_btn_confirmar_pressed"]

@@ -35,6 +35,9 @@ func unlock_movement():
 	can_move = true
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("voltar"):
+		GameManager.goto("MainMenu")
+	
 	if not can_move:
 		return
 	var direction := 0.0
