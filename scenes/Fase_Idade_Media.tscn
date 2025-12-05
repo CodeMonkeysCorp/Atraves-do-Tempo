@@ -1,0 +1,221 @@
+[gd_scene load_steps=18 format=3 uid="uid://d1dblsm1rdj6m"]
+
+[ext_resource type="Script" uid="uid://cd7r8hhavkmbf" path="res://scripts/Fase_Idade_Media.gd" id="1_4ldm5"]
+[ext_resource type="Texture2D" uid="uid://dcalc606ft8yu" path="res://assets/Cenarios/IdadeMedia.png" id="1_xed43"]
+[ext_resource type="Texture2D" uid="uid://bgwldlrhky2pu" path="res://assets/Cenarios/CaixaDeDialogo.png" id="4_pt0x4"]
+[ext_resource type="PackedScene" uid="uid://da4ortkdpwybv" path="res://scenes/Puzzle_Medieval.tscn" id="5_jbadj"]
+[ext_resource type="Texture2D" uid="uid://dj8fw4v2gayy8" path="res://assets/Siegward/SiegwardTalk.png" id="5_qqdfb"]
+[ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="5_y31y8"]
+[ext_resource type="Texture2D" uid="uid://duman6kcr1bx1" path="res://assets/Cenarios/Setinha.png" id="6_1yahv"]
+[ext_resource type="Texture2D" uid="uid://cxmlfx7oyilei" path="res://assets/Luca/Luca pensando sem perna.PNG" id="6_er6cj"]
+[ext_resource type="PackedScene" uid="uid://c13d5mr7xjmag" path="res://scenes/Npc_Siegward.tscn" id="7_pt0x4"]
+[ext_resource type="Texture2D" uid="uid://dq4floju7poa4" path="res://assets/Cenarios/SinalPuzzle.png" id="7_qqdfb"]
+[ext_resource type="Script" uid="uid://dag611cg2l4a5" path="res://scripts/tela_load.gd" id="7_xed43"]
+[ext_resource type="Script" uid="uid://xwo7ual0rtxu" path="res://scripts/PuzzleAreaFase3.gd" id="7_y31y8"]
+[ext_resource type="Script" uid="uid://bdhgd0ppx5hea" path="res://scripts/Area_TransicaoIdaFase2.gd" id="9_advn4"]
+[ext_resource type="Script" uid="uid://bkovill7dvv73" path="res://scripts/Area_TransicaoVoltaFase2gd.gd" id="10_yogms"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_er6cj"]
+distance = -224.883
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2eg0y"]
+size = Vector2(158.976, 291.379)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_advn4"]
+size = Vector2(212.184, 169.776)
+
+[node name="FaseIdadeMedia" type="Node2D"]
+script = ExtResource("1_4ldm5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(958.5, 539.25)
+scale = Vector2(1.24674, 1.05811)
+texture = ExtResource("1_xed43")
+
+[node name="Setinha" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1310, 164)
+scale = Vector2(0.571289, 0.310547)
+texture = ExtResource("6_1yahv")
+
+[node name="LimiteMundo" type="StaticBody2D" parent="."]
+position = Vector2(-1027, 218)
+rotation = -1.5708
+scale = Vector2(15.2375, 4.59795)
+
+[node name="CollisionShape2DRight" type="CollisionShape2D" parent="LimiteMundo"]
+position = Vector2(0, 414)
+shape = SubResource("WorldBoundaryShape2D_er6cj")
+
+[node name="CollisionShape2DLeft" type="CollisionShape2D" parent="LimiteMundo"]
+position = Vector2(0, 448)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_er6cj")
+
+[node name="Dialogo" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="LigaDesligaDialogos" type="Sprite2D" parent="Dialogo"]
+
+[node name="Dialogo" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos"]
+position = Vector2(627, 915)
+scale = Vector2(0.493696, 0.542436)
+texture = ExtResource("4_pt0x4")
+
+[node name="LucaFala" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+position = Vector2(779.832, -105.082)
+scale = Vector2(0.60028, 0.455689)
+texture = ExtResource("6_er6cj")
+
+[node name="SiegwardFala" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+position = Vector2(-915.542, 1.84351)
+scale = Vector2(0.842116, 0.773095)
+texture = ExtResource("5_qqdfb")
+
+[node name="FiltroEscuro" type="ColorRect" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+z_index = -1
+offset_left = -2434.69
+offset_top = -1817.72
+offset_right = -514.693
+offset_bottom = -737.725
+scale = Vector2(2.94886, 2.96237)
+size_flags_stretch_ratio = 0.0
+color = Color(0, 0, 0, 0.431373)
+
+[node name="Label" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+z_index = 1
+anchors_preset = -1
+anchor_left = -0.0353531
+anchor_top = -0.0562835
+anchor_right = 0.725584
+anchor_bottom = 0.128902
+offset_left = -500.09402
+offset_top = -49.512825
+offset_right = 678.9061
+offset_bottom = 76.48717
+scale = Vector2(0.42039156, 0.65336454)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 108
+autowrap_mode = 2
+max_lines_visible = 100
+metadata/_edit_use_anchors_ = true
+
+[node name="PULAR" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+offset_left = 370.673
+offset_top = 176.979
+offset_right = 563.673
+offset_bottom = 243.979
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+text = "PULAR..."
+
+[node name="QuemFala" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+offset_left = -145.839
+offset_top = -247.034
+offset_right = 136.161
+offset_bottom = -159.034
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "Siegward"
+
+[node name="NpcSiegward" parent="." instance=ExtResource("7_pt0x4")]
+z_index = -1
+position = Vector2(242, 871)
+scale = Vector2(5, 5)
+
+[node name="PuzzleMedieval" parent="." instance=ExtResource("5_jbadj")]
+position = Vector2(2800, -7)
+scale = Vector2(1.405, 1.403)
+
+[node name="AreaPuzzle2" type="Area2D" parent="PuzzleMedieval"]
+position = Vector2(-519.685, 338.196)
+rotation = -0.117146
+scale = Vector2(0.822726, 0.966829)
+skew = 0.0326909
+script = ExtResource("7_y31y8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleMedieval/AreaPuzzle2"]
+position = Vector2(881.69, 392.461)
+scale = Vector2(2.99613, 0.803513)
+shape = SubResource("RectangleShape2D_2eg0y")
+
+[node name="SinalPuzzle" type="Sprite2D" parent="PuzzleMedieval"]
+position = Vector2(281.13885, 586.6002)
+scale = Vector2(0.05270776, 0.057993874)
+texture = ExtResource("7_qqdfb")
+
+[node name="player" parent="." instance=ExtResource("5_y31y8")]
+position = Vector2(1455, 898)
+scale = Vector2(1.535, 1.767)
+
+[node name="InteragirPuzzle" type="Label" parent="player"]
+z_index = 2
+offset_left = -1.41932
+offset_top = 22.236
+offset_right = 171.581
+offset_bottom = 67.236
+scale = Vector2(0.953283, 1.01131)
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "<<Puzzle>>"
+
+[node name="Interagir" type="Label" parent="player"]
+z_index = 2
+offset_left = -30.0
+offset_top = 22.0
+offset_right = 185.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "<<Interagir>>"
+
+[node name="AreaIdaPuzzle" type="Area2D" parent="."]
+script = ExtResource("9_advn4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaIdaPuzzle"]
+position = Vector2(2192, 543)
+scale = Vector2(1.46567, 7.46469)
+shape = SubResource("RectangleShape2D_advn4")
+
+[node name="AreaVoltaPuzzle" type="Area2D" parent="."]
+position = Vector2(372, 0)
+script = ExtResource("10_yogms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaVoltaPuzzle"]
+position = Vector2(2389, 556)
+scale = Vector2(1.46567, 7.46469)
+shape = SubResource("RectangleShape2D_advn4")
+
+[node name="TelaLoad" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("7_xed43")
+
+[node name="ColorRect" type="ColorRect" parent="TelaLoad"]
+offset_left = -34.0
+offset_top = -49.0
+offset_right = 27.0
+offset_bottom = 2.0
+scale = Vector2(32.5663, 22.7639)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="TelaLoad"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -67.0
+offset_right = 278.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 98
+text = "Loading . . . "

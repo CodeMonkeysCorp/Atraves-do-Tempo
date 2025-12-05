@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmnuraag4n78d"]
+
+[ext_resource type="VideoStream" uid="uid://c40mvnq50vbwf" path="res://assets/Cutscenes/Garoto_Estático_Girando_no_Vórtice.ogv" id="1_lj3rq"]
+[ext_resource type="Script" uid="uid://civx7xu8mfpck" path="res://scripts/Transição.gd" id="2_vw07p"]
+
+[node name="Transição" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("1_lj3rq")
+autoplay = true
+expand = true
+script = ExtResource("2_vw07p")
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

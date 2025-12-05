@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=3 uid="uid://da4ortkdpwybv"]
+
+[ext_resource type="Texture2D" uid="uid://x0h7hwu1pr8m" path="res://assets/Cenarios/Colinas.png" id="1_dxgt4"]
+[ext_resource type="Script" uid="uid://c553cqo4acgwp" path="res://scripts/Puzzle_Medieval.gd" id="1_l0alv"]
+[ext_resource type="Texture2D" uid="uid://bq72fwqrs8kf6" path="res://assets/Cenarios/catapulta.png" id="2_4lkbv"]
+[ext_resource type="Texture2D" uid="uid://44k1xvorsnij" path="res://assets/Cenarios/Castelo.png" id="4_mr3cr"]
+[ext_resource type="Texture2D" uid="uid://bpbsj3kej3fyb" path="res://assets/Cenarios/X.png" id="5_4lkbv"]
+
+[node name="PuzzleMedieval" type="Node2D"]
+script = ExtResource("1_l0alv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(601, 404)
+scale = Vector2(1.22691, 0.778536)
+texture = ExtResource("1_dxgt4")
+
+[node name="Catapulta" type="Sprite2D" parent="."]
+position = Vector2(223, 646)
+rotation = -0.0994838
+scale = Vector2(0.77924776, 0.8889809)
+texture = ExtResource("2_4lkbv")
+
+[node name="Castelo" type="Sprite2D" parent="."]
+position = Vector2(1171, 421)
+scale = Vector2(1.4270248, 1.5479255)
+texture = ExtResource("4_mr3cr")
+
+[node name="Marcacao" type="Sprite2D" parent="Castelo"]
+position = Vector2(-66.7823, -61.0879)
+scale = Vector2(0.137034, 0.132218)
+texture = ExtResource("5_4lkbv")
+
+[node name="Variaveis" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 619.0
+offset_top = 661.0
+offset_right = 659.0
+offset_bottom = 701.0
+
+[node name="F(x) =" type="Label" parent="Variaveis"]
+layout_mode = 0
+offset_left = -153.0
+offset_top = 15.0
+offset_right = -102.0
+offset_bottom = 38.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "F(x) = -"
+
+[node name="A" type="LineEdit" parent="Variaveis"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 15.0
+offset_right = 18.5625
+offset_bottom = 46.0
+scale = Vector2(2, 2)
+placeholder_text = "A"
+max_length = 4
+
+[node name="x² +" type="Label" parent="Variaveis"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 15.0
+offset_right = 133.0
+offset_bottom = 38.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "x² +"
+
+[node name="B" type="LineEdit" parent="Variaveis"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 15.0
+offset_right = 225.563
+offset_bottom = 46.0
+scale = Vector2(2, 2)
+placeholder_text = "B"
+max_length = 2
+
+[node name="x" type="Label" parent="Variaveis"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 15.0
+offset_right = 345.0
+offset_bottom = 64.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "X
+"
+
+[node name="BotaoConfirmar" type="Button" parent="Variaveis"]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 21.0
+offset_right = 435.0
+offset_bottom = 52.0
+scale = Vector2(1.26707, 1.42437)
+text = "Confirmar"
+
+[node name="Errou" type="Label" parent="Variaveis"]
+visible = false
+layout_mode = 0
+offset_left = -114.0
+offset_top = -38.0
+offset_right = -63.0
+offset_bottom = -12.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Errou"
+
+[node name="Dica" type="Label" parent="Variaveis"]
+visible = false
+layout_mode = 0
+offset_left = -140.0
+offset_top = -68.0
+offset_right = -43.0
+offset_bottom = -45.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "Dica 1: Tente "

@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc20nn0tv3qcg"]
+
+[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://assets/Cenarios/Egito2.png" id="1_o7uig"]
+[ext_resource type="Texture2D" uid="uid://bw23u3fodmv5e" path="res://assets/Menu/Menu.png" id="2_ifubo"]
+[ext_resource type="Script" uid="uid://c3lfjw0wlid65" path="res://scripts/LinkFormulario.gd" id="3_26ps5"]
+
+[node name="Formulario" type="Node2D"]
+
+[node name="Fundo" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_o7uig")
+
+[node name="FiltroEscuro" type="ColorRect" parent="Fundo"]
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_stretch_ratio = 0.0
+color = Color(0, 0, 0, 0.431373)
+
+[node name="CaixaTexto" type="Sprite2D" parent="."]
+position = Vector2(965, 524)
+scale = Vector2(0.8, 0.57)
+texture = ExtResource("2_ifubo")
+
+[node name="Label" type="Label" parent="."]
+clip_contents = true
+offset_left = 632.0
+offset_top = 352.0
+offset_right = 1118.0
+offset_bottom = 394.0
+scale = Vector2(1.5, 1.5)
+theme_override_font_sizes/font_size = 30
+text = "Nos avalie!"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 672.0
+offset_top = 424.0
+offset_right = 1312.0
+offset_bottom = 709.0
+theme_override_font_sizes/font_size = 32
+text = "Sabemos que não somos Game Developers profissionais, portando agradeceriamos por mais um minuto do seu tempo para avaliar nosso projeto:
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LinkFormulario" type="Button" parent="."]
+offset_left = 840.0
+offset_top = 677.0
+offset_right = 1056.0
+offset_bottom = 708.0
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.348381, 0.549391, 1, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+text = "LINK DO FORMULARIO"
+script = ExtResource("3_26ps5")
+
+[connection signal="pressed" from="LinkFormulario" to="LinkFormulario" method="_on_pressed"]

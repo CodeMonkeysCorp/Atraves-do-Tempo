@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://flykwqdqh3rm"]
+
+[ext_resource type="Script" uid="uid://rvlgv0hlo3j" path="res://scripts/Npc.gd" id="1_abqhh"]
+[ext_resource type="Texture2D" uid="uid://cflrj84pcgqsu" path="res://assets/Cenarios/SinalInteragir.png" id="3_rv78h"]
+[ext_resource type="Texture2D" uid="uid://c1t3op51f2h08" path="res://assets/Inacio/Inacio.png" id="3_xwh3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ls81"]
+size = Vector2(30.7358, 78.6058)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h74y"]
+size = Vector2(67.209, 82.7201)
+
+[node name="EgitoNpc" type="Node2D"]
+scale = Vector2(2.44015, 2.30899)
+script = ExtResource("1_abqhh")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, 0)
+
+[node name="CollisionShapeNPC" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8.3766, -9.20318)
+shape = SubResource("RectangleShape2D_5ls81")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-7.75795, -9.15898)
+scale = Vector2(0.0700437, 0.0632863)
+texture = ExtResource("3_xwh3f")
+
+[node name="CollisionShapeAreaTalk" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-21.4905, -7.57908)
+shape = SubResource("RectangleShape2D_2h74y")
+
+[node name="SinalInteragir" type="Sprite2D" parent="."]
+position = Vector2(-7.3765955, -66.26274)
+scale = Vector2(0.0246075, 0.0352112)
+texture = ExtResource("3_rv78h")

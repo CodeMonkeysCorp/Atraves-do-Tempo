@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqa46l6im51gy"]
+
+[ext_resource type="Texture2D" uid="uid://dsu4ljhoua13v" path="res://assets/Epicuro(Grecia)/EpicuroPensando.png" id="1_5tv57"]
+[ext_resource type="Script" uid="uid://b71dvc24ui7cy" path="res://scripts/Npc_Epicuro.gd" id="1_gwehf"]
+[ext_resource type="Texture2D" uid="uid://cflrj84pcgqsu" path="res://assets/Cenarios/SinalInteragir.png" id="2_q3d7k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ls81"]
+size = Vector2(30.7358, 78.6058)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h74y"]
+size = Vector2(67.209, 82.7201)
+
+[node name="GreciaNpc" type="Node2D"]
+scale = Vector2(2.44015, 2.30899)
+script = ExtResource("1_gwehf")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, 0)
+
+[node name="CollisionShapeNPC" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8.3766, -9.20318)
+shape = SubResource("RectangleShape2D_5ls81")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-7.75795, -9.15898)
+scale = Vector2(0.2, 0.18)
+texture = ExtResource("1_5tv57")
+
+[node name="CollisionShapeAreaTalk" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-21.4905, -7.57908)
+shape = SubResource("RectangleShape2D_2h74y")
+
+[node name="SinalInteragir" type="Sprite2D" parent="."]
+position = Vector2(-6.1471624, -70.593636)
+scale = Vector2(0.0246075, 0.0352112)
+texture = ExtResource("2_q3d7k")

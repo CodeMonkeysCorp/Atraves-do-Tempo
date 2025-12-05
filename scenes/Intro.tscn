@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq7hcfo3psk4u"]
+
+[ext_resource type="Script" uid="uid://r3wneyaxttrj" path="res://scripts/Intro.gd" id="1_ywiat"]
+[ext_resource type="Texture2D" uid="uid://mjr3vvm645ve" path="res://assets/Cutscenes/Cena1.png" id="2_mkji7"]
+[ext_resource type="Texture2D" uid="uid://8v0kc1ylinf5" path="res://assets/Cutscenes/Cena2.png" id="3_capyo"]
+[ext_resource type="Texture2D" uid="uid://bg2xf1hj0nehb" path="res://assets/Cutscenes/Cena3.png" id="4_b2a04"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ywiat")
+imagens_historia = Array[Texture2D]([ExtResource("2_mkji7"), ExtResource("3_capyo"), ExtResource("4_b2a04")])
+proxima_cena = "uid://dmnuraag4n78d"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5

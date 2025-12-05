@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://q0pb1nunshor"]
+
+[ext_resource type="Script" uid="uid://bl64jpxnlegrq" path="res://scripts/musica.gd" id="1_ro6vx"]
+[ext_resource type="AudioStream" uid="uid://b2uebj2sionrk" path="res://assets/Musicas/MusicaEgito.wav" id="1_wtq27"]
+[ext_resource type="AudioStream" uid="uid://bdjfkkr2lviqr" path="res://assets/Musicas/MusicaGrecia.wav" id="2_f5m7v"]
+[ext_resource type="AudioStream" uid="uid://cop0alcglova6" path="res://assets/Musicas/MusicaMedieval.wav" id="3_3m70k"]
+
+[node name="Musica" type="Node2D"]
+script = ExtResource("1_ro6vx")
+
+[node name="Egito" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_wtq27")
+pitch_scale = 0.95
+max_distance = 4096.0
+attenuation = 0.0065695033
+max_polyphony = 46
+panning_strength = 0.0
+area_mask = 0
+playback_type = 1
+
+[node name="Grecia" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_f5m7v")
+volume_db = -18.421
+pitch_scale = 0.95
+max_distance = 4096.0
+attenuation = 0.0065695033
+max_polyphony = 46
+panning_strength = 0.0
+area_mask = 0
+playback_type = 1
+
+[node name="Medieval" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3m70k")
+volume_db = -10.0
+pitch_scale = 0.95
+max_distance = 4096.0
+attenuation = 0.0065695033
+max_polyphony = 46
+panning_strength = 0.0
+area_mask = 0
+playback_type = 1

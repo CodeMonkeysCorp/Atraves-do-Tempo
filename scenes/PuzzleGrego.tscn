@@ -1,0 +1,209 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhmsx00dios8y"]
+
+[ext_resource type="Script" uid="uid://c8odmv3sb1ms6" path="res://scripts/PuzzleGrego.gd" id="1_k10ag"]
+[ext_resource type="Texture2D" uid="uid://cecpafsla3xlc" path="res://assets/Cenarios/Grecia.png" id="2_k10ag"]
+[ext_resource type="Texture2D" uid="uid://dioofty6xleka" path="res://assets/Cenarios/Pilar.png" id="3_1hheu"]
+[ext_resource type="Texture2D" uid="uid://dq4floju7poa4" path="res://assets/Cenarios/SinalPuzzle.png" id="4_1hheu"]
+[ext_resource type="Texture2D" uid="uid://bf6lwcvxd0m5g" path="res://assets/Cenarios/ChatGPT Image 15_11_2025, 18_56_59.png" id="5_whktd"]
+
+[node name="PuzzleGrega" type="Node2D"]
+scale = Vector2(1.4082416, 1.3827814)
+script = ExtResource("1_k10ag")
+
+[node name="Atenas sla" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(682.117, 329)
+scale = Vector2(0.8878685, 0.8848861)
+texture = ExtResource("2_k10ag")
+
+[node name="Variaveis" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -137.76044
+offset_top = -15.909963
+offset_right = -97.76044
+offset_bottom = 24.090038
+
+[node name="Enunciado" type="Label" parent="Variaveis"]
+layout_mode = 0
+offset_left = 877.6903
+offset_top = 436.80078
+offset_right = 1296.6903
+offset_bottom = 537.8008
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Sabendo que A² + B² = C², qual a distância da 
+ponta da sombra até o topo do pilar?"
+horizontal_alignment = 1
+
+[node name="C=" type="Label" parent="Variaveis"]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 590.0
+offset_right = 944.0
+offset_bottom = 613.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "C ="
+horizontal_alignment = 1
+
+[node name="Resposta" type="LineEdit" parent="Variaveis"]
+layout_mode = 0
+offset_left = 990.0
+offset_top = 590.0
+offset_right = 1060.0
+offset_bottom = 621.0
+scale = Vector2(2, 2)
+placeholder_text = "R:"
+max_length = 4
+
+[node name="BtnConfirmar" type="Button" parent="Variaveis"]
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 590.0
+offset_right = 1240.0
+offset_bottom = 621.0
+scale = Vector2(2, 2)
+text = "Confirmar
+"
+
+[node name="Parabens" type="Label" parent="Variaveis"]
+layout_mode = 0
+offset_left = 1131.1979
+offset_top = 658.0939
+offset_right = 1221.1979
+offset_bottom = 681.0939
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Muito Bem!"
+horizontal_alignment = 1
+
+[node name="Dica" type="Label" parent="Variaveis"]
+visible = false
+layout_mode = 0
+offset_left = 824.4324
+offset_top = 660.26337
+offset_right = 1208.4324
+offset_bottom = 709.26337
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Dica 1: Considere o tamanho da sombra como o A
+"
+horizontal_alignment = 1
+
+[node name="BtnAvancar" type="Button" parent="Variaveis"]
+layout_mode = 0
+offset_left = 1344.2295
+offset_top = 589.3918
+offset_right = 1415.2295
+offset_bottom = 620.3918
+scale = Vector2(2, 2)
+text = "Avançar"
+
+[node name="TenteNovamente" type="Label" parent="Variaveis"]
+layout_mode = 0
+offset_left = 939.4695
+offset_top = 539.4924
+offset_right = 1317.4695
+offset_bottom = 584.4924
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Errou, tente novamente."
+
+[node name="Pilar" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(690, 427.125)
+scale = Vector2(0.32958984, 0.32958984)
+texture = ExtResource("3_1hheu")
+
+[node name="Sombra" type="Polygon2D" parent="."]
+position = Vector2(-72.430756, -510.5652)
+scale = Vector2(1.0950198, 2.0268252)
+color = Color(0, 0, 0, 0.35686275)
+polygon = PackedVector2Array(650, 488, 599, 488, 588, 496, 325, 496, 316, 491, 314, 484, 295, 484, 295.00006, 518.0656, 295, 554, 314, 554, 316, 547, 325, 542, 588, 542, 599, 550, 650, 550)
+
+[node name="Marcações" type="Node2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="Marcações"]
+position = Vector2(-105.600006, -70.87497)
+scale = Vector2(1.2, 1.2)
+points = PackedVector2Array(295, 557, 295, 581)
+width = 2.0
+default_color = Color(0.34241807, 0.21670884, 0.09103086, 1)
+
+[node name="Label" type="Label" parent="Marcações"]
+offset_left = 256.0
+offset_top = 618.125
+offset_right = 325.0
+offset_bottom = 641.125
+scale = Vector2(1.2, 1.2)
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5 Metros"
+
+[node name="Line2D2" type="Line2D" parent="Marcações"]
+position = Vector2(29, -70.87497)
+scale = Vector2(1.2, 1.2)
+points = PackedVector2Array(295, 557, 295, 581)
+width = 2.0
+default_color = Color(0.34241807, 0.21670884, 0.09103086, 1)
+
+[node name="Label2" type="Label" parent="Marcações"]
+offset_left = 389.00003
+offset_top = 621.125
+offset_right = 458.00003
+offset_bottom = 644.125
+scale = Vector2(1.2, 1.2)
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3 Metros"
+
+[node name="Line2D3" type="Line2D" parent="Marcações"]
+position = Vector2(160, -70.87497)
+scale = Vector2(1.2, 1.2)
+points = PackedVector2Array(295, 557, 295, 581)
+width = 2.0
+default_color = Color(0.34241807, 0.21670884, 0.09103086, 1)
+
+[node name="Label3" type="Label" parent="Marcações"]
+offset_left = 519.0
+offset_top = 623.125
+offset_right = 588.0
+offset_bottom = 646.125
+scale = Vector2(1.2, 1.2)
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1 Metro"
+
+[node name="Line2D4" type="Line2D" parent="Marcações"]
+position = Vector2(190.69809, -989.4785)
+scale = Vector2(2.150007, 2.1500063)
+points = PackedVector2Array(276, 566, 297, 566)
+width = 2.0
+default_color = Color(0.34241807, 0.21670884, 0.09103086, 1)
+
+[node name="Label4" type="Label" parent="Marcações"]
+offset_left = 828.0
+offset_top = 228.12503
+offset_right = 897.0
+offset_bottom = 251.12503
+scale = Vector2(1.2, 1.2)
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3 Metros"
+
+[node name="SinalPuzzle" type="Sprite2D" parent="."]
+position = Vector2(458.018, 314.58334)
+scale = Vector2(0.10834141, 0.094377264)
+texture = ExtResource("4_1hheu")
+
+[node name="LinhaAmarela" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(423.2228, 412.93582)
+rotation = -0.79310125
+scale = Vector2(0.42049307, 0.121106036)
+texture = ExtResource("5_whktd")
+
+[connection signal="pressed" from="Variaveis/BtnConfirmar" to="." method="_on_btn_confirmar_pressed"]
+[connection signal="pressed" from="Variaveis/BtnAvancar" to="." method="_on_btn_avancar_pressed"]

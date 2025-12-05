@@ -1,0 +1,168 @@
+[gd_scene load_steps=5 format=3 uid="uid://btyjlgy307xub"]
+
+[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://assets/Cenarios/Egito2.png" id="1_73e8f"]
+[ext_resource type="Script" uid="uid://b4abxydonf72s" path="res://scripts/DadosGameplay.gd" id="1_dx2xm"]
+[ext_resource type="Texture2D" uid="uid://bw23u3fodmv5e" path="res://assets/Menu/Menu.png" id="2_dx2xm"]
+[ext_resource type="Texture2D" uid="uid://dv307y15bk3v2" path="res://assets/Menu/Sair.png" id="3_gb6g5"]
+
+[node name="DadosGameplay" type="Node2D"]
+script = ExtResource("1_dx2xm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_73e8f")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_stretch_ratio = 0.0
+color = Color(0, 0, 0, 0.431373)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(994, 560)
+scale = Vector2(0.8, 0.65)
+texture = ExtResource("2_dx2xm")
+
+[node name="Titulo" type="Label" parent="."]
+clip_contents = true
+offset_left = 736.0
+offset_top = 336.0
+offset_right = 1285.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 52
+text = "Dados de gameplay"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Tentativas" type="Label" parent="."]
+offset_left = 660.0
+offset_top = 432.0
+offset_right = 819.0
+offset_bottom = 474.0
+scale = Vector2(1.6, 1.6)
+theme_override_font_sizes/font_size = 30
+text = "Tentativas:"
+vertical_alignment = 1
+
+[node name="TentativasEgito" type="Label" parent="Tentativas"]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 217.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "1"
+vertical_alignment = 1
+
+[node name="TentativasGrecia" type="Label" parent="Tentativas"]
+layout_mode = 0
+offset_left = 280.0
+offset_right = 297.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "6"
+vertical_alignment = 1
+
+[node name="TentativasIdadeMedia" type="Label" parent="Tentativas"]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 377.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "8"
+vertical_alignment = 1
+
+[node name="Dicas" type="Label" parent="."]
+offset_left = 660.0
+offset_top = 530.0
+offset_right = 746.0
+offset_bottom = 572.0
+scale = Vector2(1.6, 1.6)
+theme_override_font_sizes/font_size = 30
+text = "Dicas:"
+vertical_alignment = 1
+
+[node name="DicasEgito" type="Label" parent="Dicas"]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 217.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "2"
+vertical_alignment = 1
+
+[node name="DicasGrecia" type="Label" parent="Dicas"]
+layout_mode = 0
+offset_left = 280.0
+offset_right = 297.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "3"
+vertical_alignment = 1
+
+[node name="DicasidadeMedia" type="Label" parent="Dicas"]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 377.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "3"
+vertical_alignment = 1
+
+[node name="Tempo" type="Label" parent="."]
+offset_left = 660.0
+offset_top = 630.0
+offset_right = 768.0
+offset_bottom = 672.0
+scale = Vector2(1.6, 1.6)
+theme_override_font_sizes/font_size = 30
+text = "Tempo:"
+vertical_alignment = 1
+
+[node name="TempoEgito" type="Label" parent="Tempo"]
+layout_mode = 0
+offset_left = 120.0
+offset_right = 223.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "1m 36s"
+vertical_alignment = 1
+
+[node name="TempoGrecia" type="Label" parent="Tempo"]
+layout_mode = 0
+offset_left = 240.0
+offset_right = 343.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "2m 12s"
+vertical_alignment = 1
+
+[node name="TempoIdadeMedia" type="Label" parent="Tempo"]
+layout_mode = 0
+offset_left = 370.0
+offset_right = 473.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "1m 57s"
+vertical_alignment = 1
+
+[node name="BtnVoltar" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 700.0
+offset_top = 605.0
+offset_right = 2620.0
+offset_bottom = 1685.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = true
+texture_normal = ExtResource("3_gb6g5")
+
+[connection signal="pressed" from="BtnVoltar" to="." method="_on_btn_voltar_pressed"]

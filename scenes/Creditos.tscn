@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8hejxdtiaslo"]
+
+[ext_resource type="Texture2D" uid="uid://ccdklopo5ag4w" path="res://assets/Cenarios/Egito2.png" id="1_lm0yj"]
+[ext_resource type="Texture2D" uid="uid://bw23u3fodmv5e" path="res://assets/Menu/Menu.png" id="2_dc0wp"]
+[ext_resource type="Script" uid="uid://b1cia8nmqqjdb" path="res://scripts/Creditos.gd" id="3_p1hgr"]
+[ext_resource type="Texture2D" uid="uid://dv307y15bk3v2" path="res://assets/Menu/Sair.png" id="3_rnov5"]
+[ext_resource type="Texture2D" uid="uid://bbo7ovv6ktgu" path="res://assets/Cenarios/donut-chart.png" id="5_3fajg"]
+
+[node name="Creditos" type="Node2D"]
+script = ExtResource("3_p1hgr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_lm0yj")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_stretch_ratio = 0.0
+color = Color(0, 0, 0, 0.431373)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(964, 550)
+scale = Vector2(0.464, 0.47)
+texture = ExtResource("2_dc0wp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 803.0
+offset_top = 393.0
+offset_right = 1153.0
+offset_bottom = 642.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Créditos"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Desenvolvido por: 
+André Schultz
+José Henrique Bruhmuller
+Matheus Busemeyer
+Lucas Monich Nunes
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuBox" type="VBoxContainer" parent="."]
+offset_left = 770.0
+offset_top = 551.0
+offset_right = 2690.0
+offset_bottom = 1662.0
+scale = Vector2(0.218574, 0.218574)
+theme_override_constants/separation = 60
+
+[node name="BtnVoltar" type="TextureButton" parent="MenuBox"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("3_rnov5")
+
+[node name="BtnDados" type="Button" parent="."]
+offset_left = 760.0
+offset_top = 704.0
+offset_right = 997.0
+offset_bottom = 742.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/icon_max_width = 30
+theme_override_font_sizes/font_size = 18
+theme_override_icons/icon = ExtResource("5_3fajg")
+text = "Confira seu Desempenho"
+flat = true
+
+[connection signal="pressed" from="BtnDados" to="." method="_on_btn_dados_pressed"]

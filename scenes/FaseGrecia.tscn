@@ -1,0 +1,165 @@
+[gd_scene load_steps=13 format=3 uid="uid://b2oct7kgihwpu"]
+
+[ext_resource type="Texture2D" uid="uid://cecpafsla3xlc" path="res://assets/Cenarios/Grecia.png" id="1_2pqa2"]
+[ext_resource type="Script" uid="uid://c04qiscrq76u2" path="res://scripts/FaseGrecia.gd" id="1_sxkbx"]
+[ext_resource type="PackedScene" uid="uid://2m281abxmes5" path="res://scenes/Player.tscn" id="2_2pqa2"]
+[ext_resource type="Script" uid="uid://b2cjt3h785784" path="res://scripts/PuzzleAreaFaseGrecia.gd" id="2_gdfqa"]
+[ext_resource type="PackedScene" uid="uid://cqa46l6im51gy" path="res://scenes/GreciaNpc.tscn" id="4_n4jj8"]
+[ext_resource type="Texture2D" uid="uid://dq4floju7poa4" path="res://assets/Cenarios/SinalPuzzle.png" id="5_3wfs6"]
+[ext_resource type="Texture2D" uid="uid://bgwldlrhky2pu" path="res://assets/Cenarios/CaixaDeDialogo.png" id="5_xl8el"]
+[ext_resource type="Texture2D" uid="uid://cxmlfx7oyilei" path="res://assets/Luca/Luca pensando sem perna.PNG" id="6_gdfqa"]
+[ext_resource type="Texture2D" uid="uid://dw4bqpobdebun" path="res://assets/Epicuro(Grecia)/EpicuroFalando.png" id="7_xl8el"]
+[ext_resource type="Texture2D" uid="uid://dioofty6xleka" path="res://assets/Cenarios/Pilar.png" id="9_h015a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpb4j"]
+size = Vector2(122.72, 240.051)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2roj"]
+distance = -224.883
+
+[node name="FaseGrecia" type="Node2D"]
+script = ExtResource("1_sxkbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(958.5, 539.25)
+scale = Vector2(1.24674, 1.05811)
+texture = ExtResource("1_2pqa2")
+
+[node name="AreaPuzzle" type="Area2D" parent="Sprite2D"]
+position = Vector2(-65.3705, 12.9949)
+script = ExtResource("2_gdfqa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AreaPuzzle"]
+position = Vector2(106.678215, 308.09644)
+shape = SubResource("RectangleShape2D_kpb4j")
+
+[node name="Sombra" type="Polygon2D" parent="Sprite2D/AreaPuzzle"]
+position = Vector2(-503.71362, -880.81586)
+scale = Vector2(0.9022846, 2.126127)
+color = Color(0, 0, 0, 0.35686275)
+polygon = PackedVector2Array(650, 488, 599, 488, 588, 496, 325, 496, 316, 491, 314, 484, 295, 484, 295, 554, 314, 554, 316, 547, 325, 542, 588, 542, 599, 550, 650, 550)
+
+[node name="Pilar" type="Sprite2D" parent="Sprite2D/AreaPuzzle"]
+position = Vector2(107.480286, 114.35481)
+scale = Vector2(0.26366007, 0.33179253)
+texture = ExtResource("9_h015a")
+
+[node name="SinalPuzzle" type="Sprite2D" parent="Sprite2D/AreaPuzzle/Pilar"]
+visible = false
+position = Vector2(-355.93085, -54.119713)
+scale = Vector2(0.37451136, 0.29044127)
+texture = ExtResource("5_3wfs6")
+
+[node name="player" parent="." instance=ExtResource("2_2pqa2")]
+position = Vector2(200, 908)
+scale = Vector2(2.11369, 2.11369)
+
+[node name="InteragirPuzzle" type="Label" parent="player"]
+z_index = 2
+offset_left = -1.41932
+offset_top = 22.236
+offset_right = 171.581
+offset_bottom = 67.236
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "<<Puzzle>>"
+
+[node name="Interagir" type="Label" parent="player"]
+z_index = 2
+offset_left = -30.0
+offset_top = 22.0
+offset_right = 185.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "<<Interagir>>"
+
+[node name="Dialogo" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="LigaDesligaDialogos" type="Sprite2D" parent="Dialogo"]
+
+[node name="Dialogo" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos"]
+z_index = 1
+position = Vector2(1328, 935)
+scale = Vector2(0.466194, 0.518249)
+texture = ExtResource("5_xl8el")
+
+[node name="FiltroEscuro" type="ColorRect" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+z_index = -1
+offset_left = -2848.6
+offset_top = -1804.15
+offset_right = -928.6
+offset_bottom = -724.152
+scale = Vector2(2.8346, 2.47635)
+size_flags_stretch_ratio = 0.0
+color = Color(0, 0, 0, 0.431373)
+
+[node name="Label" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+anchors_preset = -1
+anchor_left = -0.0356074
+anchor_top = -0.0568998
+anchor_right = 0.820643
+anchor_bottom = 0.130137
+offset_left = -493.634
+offset_top = -58.5482
+offset_right = 685.366
+offset_bottom = 67.4518
+scale = Vector2(0.391364, 0.864029)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 92
+autowrap_mode = 2
+max_lines_visible = 100
+metadata/_edit_use_anchors_ = true
+
+[node name="Luca" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+position = Vector2(-864.447, -84.9014)
+scale = Vector2(0.576795, 0.503464)
+texture = ExtResource("6_gdfqa")
+flip_h = true
+
+[node name="NpcEpicuro" type="Sprite2D" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+position = Vector2(825.837, -59.8169)
+scale = Vector2(3, 2.474)
+texture = ExtResource("7_xl8el")
+
+[node name="Pular" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+offset_left = 373.235
+offset_top = 179.45
+offset_right = 566.235
+offset_bottom = 246.45
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+text = "PULAR..."
+
+[node name="QuemFala" type="Label" parent="Dialogo/LigaDesligaDialogos/Dialogo"]
+offset_left = -102.961
+offset_top = -248.915
+offset_right = 83.0386
+offset_bottom = -160.915
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "Epicuro"
+
+[node name="LimiteMundo" type="StaticBody2D" parent="."]
+position = Vector2(-1027, 218)
+rotation = -1.5708
+scale = Vector2(15.2375, 4.59795)
+
+[node name="CollisionShape2DRight" type="CollisionShape2D" parent="LimiteMundo"]
+position = Vector2(0, 414)
+shape = SubResource("WorldBoundaryShape2D_h2roj")
+
+[node name="CollisionShape2DLeft" type="CollisionShape2D" parent="LimiteMundo"]
+position = Vector2(0, 448)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_h2roj")
+
+[node name="npc" parent="." instance=ExtResource("4_n4jj8")]
+position = Vector2(1754, 865)
+scale = Vector2(5, 4.732)
