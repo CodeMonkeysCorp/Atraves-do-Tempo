@@ -129,10 +129,11 @@ func _draw():
 
 func _mostrar_dica():
 	if GameManager.tentativasIdadeMedia < 5 and GameManager.tentativasIdadeMedia >= 2:
+		label_dica.text = 'Dica 1: "A" governa gravidade e pode ser um número decimal.'
 		label_dica.show()
 		dica_1 = true
 	if GameManager.tentativasIdadeMedia >= 5:
-		label_dica.text = "Dica 2: Use o Mínimo Multiplo Comum das bases nas frações"
+		label_dica.text = 'Dica 2: "B" define o ângulo inicial em que a pedra será atirada.'
 		dica_2 = true
 
 
